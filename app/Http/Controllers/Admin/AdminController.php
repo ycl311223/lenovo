@@ -10,7 +10,7 @@ class AdminController extends Controller
 {
     //
     public function index(){
-        $data=\DB::table('admin')->get();
+        $data=\DB::table('admin')->paginate(3);
         return view("admin.admin.index")->with("data",$data);
     }
 
@@ -39,7 +39,7 @@ class AdminController extends Controller
 
             $admin=new admin();
             $admin->name=$arr['name'];
-            $admin->pass=$arr['pass'];
+            $admin->pass=\Crypt::encrypt($arr['pass']);
             $admin->status=$arr['status'];
             $admin->time=$arr['time'];
 
@@ -63,6 +63,7 @@ class AdminController extends Controller
 
     public function edit($id){
         $data=\DB::table('admin')->find($id);
+        $data->pass=\Crypt::decrypt($data->pass);
         return view("admin.admin.edit")->with("data",$data);
     }
 
@@ -81,7 +82,8 @@ class AdminController extends Controller
         $validator=\Validator::make($arr,$rules,$message);
 
         if($validator->passes()){
-            $sql="update admin set pass='$arr[pass]',status=$arr[status] where id=$arr[id]";
+            $pass=\Crypt::encrypt($arr['pass']);
+            $sql="update admin set pass='$pass',status=$arr[status] where id=$arr[id]";
             if(\DB::update($sql)){
                 return 1;
             }else{
@@ -90,5 +92,20 @@ class AdminController extends Controller
         }else{
             return $validator->getMessageBag()->getMessages();
         }
+    }
+    public function changeSta(){
+        $id=$_POST['id'];
+        $data=\DB::table('admin')->find($id);
+
+        if($data->status==1){
+            $data->status=0;
+        }else{
+            $data->status=1;
+        }
+        if(\DB::update("update admin set status=$data->status where id=$id")){
+            return 1;
+        }else{
+            return 0;
+        };
     }
 }

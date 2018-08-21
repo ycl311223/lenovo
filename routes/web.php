@@ -23,4 +23,9 @@ Route::get('/', function () {
 Route::group(['namespace'=>'Admin','prefix'=>'a'],function(){
     Route::get('/','IndexController@index');
     Route::resource('admin',"AdminController");
+    Route::post('admin/changeSta',"AdminController@changeSta");
+
+    Route::resource('user',"UserController");
 });
+//这里的控制器为啥必须要用反斜杠呢？
+Route::any('/admin/shangchuan',"Admin\CommonController@upload");

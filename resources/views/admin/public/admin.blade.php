@@ -106,7 +106,7 @@
 						<h2 class="panel-title"><span class="glyphicon glyphicon-user"></span> 会员管理</h2>
 					</div>
 					<ul class="list-group">
-					    <li class="list-group-item"><a href="./user/index.html">会员列表</a></li>
+					    <li class="list-group-item"><a href="/a/user">会员列表</a></li>
 					 	
 					</ul>
 				</div>
