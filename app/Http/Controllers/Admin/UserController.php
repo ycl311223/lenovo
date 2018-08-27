@@ -19,10 +19,10 @@ class UserController extends Controller
     }
 
 
-    public function store(){
-        parse_str($_POST,$arr);
-        dd($arr);
-
+    public function store(Request $request){
+        $img=$request->input('imgs');
+        $data=$request->except('imgs');
+        dd($data);
         $rules=[
             'name'=>"required",
             'pass'=>"required|same:repass",
@@ -36,10 +36,10 @@ class UserController extends Controller
             'tel.required'=>'电话必填',
         ];
 
-        $validator=\Validator::make($arr,$rules,$message);
-        if($validator){
+//        $validator=\Validator::make($arr,$rules,$message);
+//        if($validator){
 //            \DB::table('user')
-        }
+        
     }
 
 }
