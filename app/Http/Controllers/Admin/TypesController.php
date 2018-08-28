@@ -7,10 +7,22 @@ use App\Http\Controllers\Controller;
 
 class TypesController extends Controller
 {
+
+    //使用递归的方法将分类按级别放到数组中,但是这个方法弄出的数组在前端页面没有，只是在这示意一下。
+    public function data1($data,$pid=0){
+        $newArr=array();
+        foreach ($data as $key => $value){
+            if($value->pid==$pid){
+                $newArr[$value->id]=$value;
+                $newArr[$value->id]->zi=$this->data1($data,$value->id);
+            }
+        }
+        return $newArr;
+    }
     //跳转到分类的首页面
     public function index(){
-        //查询数据
-        $data=\DB::table('types')->orderBy("sort","desc")->get();
+        //查询数据并排序
+        $data=\DB::select("select types.*,concat(path,id) p from types order by p");
         //加载页面
         return view("admin.types.index")->with("data",$data);
     }

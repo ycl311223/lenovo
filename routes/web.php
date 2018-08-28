@@ -29,6 +29,17 @@ Route::group(['namespace'=>'Admin','prefix'=>'a'],function(){
 
     Route::resource('user',"UserController");
     Route::resource('goods',"GoodsController");
+
+    //后台的系统管理
+        //系统管理
+        Route::resource("sys/config","ConfigsController");
+        //轮播图管理
+        Route::resource("sys/slider","SliderController");
+
+        //广告管理
+        Route::resource("sys/ads","AdsController");
+        //分类广告管理
+
 });
 //这里的控制器为啥必须要用反斜杠呢？
 Route::any('/admin/shangchuan',"Admin\CommonController@upload");

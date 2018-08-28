@@ -20,8 +20,8 @@
 	<!-- 面版 -->
 	<div class="panel panel-default">
 		<div class="panel-heading">
-			<button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> 批量删除</button>
-			<a href="javascript:;" data-toggle="modal" data-target="#addUser" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> 添加用户</a>
+
+			<a href="javascript:;" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> 用户展示</a>
 			
 			<p class="pull-right tots" >共有 <span id="tot">{{$data->count()}}</span> 条数据</p>
 			<form action="" class="form-inline pull-right">
@@ -40,7 +40,7 @@
 			<th>TEL</th>
 			<th>状态</th>
 			<th>加入时间</th>
-			<th>操作</th>
+
 			@foreach($data as $value)
 				<tr>
 					<td><input type="checkbox" name="" ></td>
@@ -59,9 +59,6 @@
 					@endif
 					<td>{{date("Y-m-d H:i:s",$value->time)}}</td>
 
-					<td><a href="javascript:;" onclick="edit({{$value->id}})" data-toggle="modal" data-target="#updateAdmin">编辑</a>
-						<a href="javascript:;" onclick="deletes(this,{{$value->id}})">删除</a>
-					</td>
 				</tr>
 			@endforeach
 		</table>
