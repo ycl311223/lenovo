@@ -25,9 +25,36 @@ class GoodsController extends Controller
             $arr=explode(',',$value->path);
             $size=count($arr);
             $value->size=$size-2;
-            $value->html=str_repeat('|---',$size-2).$value.name;
+            $value->html=str_repeat('|---',$size-2).$value->name;
         }
         //加载添加页面
         return view('admin.goods.add')->with("data",$data);
+    }
+
+    public function store(Request $request){
+        //取出多图
+        $imgs=$request->input("imgs");
+        //除掉token和多图，剩下的数据就全是商品的数据，可以直接存到数据库
+        $data=$request->except("_token","imgs");
+        if($id=\DB::table('goods')->insertGetId($data)){
+            $arr=explode(',',$imgs);
+            foreach ($arr as $key =>$value){
+                $brr=array();
+                $brr['gid']=$id;
+                $brr['img']=$value;
+                \DB::table('goodsimg')->insert($brr);
+            }
+            return redirect('a/goods');
+        }else{
+            return back();
+        }
+    }
+    //Request $request可以获取到post里面的数据
+    public function destroy($id){
+        if(\DB::table('goods')->delete($id)){
+            return 1;
+        }else{
+            return 0;
+        }
     }
 }

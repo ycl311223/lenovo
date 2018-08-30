@@ -48,17 +48,17 @@
 					<td>{{$value->title}}</td>
 					<td>{{$value->info}}</td>
 					<td>
-						<img width="200px" src="/Uploads/goods/{{$value->img}}" alt="">
+						<img width="100px" src="/Uploads/goods/{{$value->img}}" alt="">
 						<br>
-						@foreach($data->tupian as $val)
-							<img width="100px" src="/Uploads/goods/{{$val->img}}">
+						@foreach($value->tupian as $val)
+							<img width="50px" src="/Uploads/goods/{{$val->img}}">
 						@endforeach
 					</td>
 					<td>{{$value->price}}</td>
 					<td>{{$value->num}}</td>
 					<td>
 						<a>修改</a>
-						<a>删除</a>
+						<a href="javascript:;" onclick="deletes(this,{{$value->id}})">删除</a>
 					</td>
 
 				</tr>
@@ -76,16 +76,19 @@
 
     //删除商品
     function deletes(obj,id){
-		$.post('/a/admin/'+id,{'_token':"{{csrf_token()}}","_method":"delete"},function(data){
-			if(data==1){
-				$(obj).parent().parent().remove();
-				tot=Number($("#tot").html());
-				$("#tot").html(--tot);
-			}else{
-			    alert("删除失败");
-			}
+        if(confirm("你确认要删除吗？")){
+            $.post('/a/goods/'+id,{'_token':"{{csrf_token()}}","_method":"delete"},function(data){
+                if(data==1){
+                    $(obj).parent().parent().remove();
+                    tot=Number($("#tot").html());
+                    $("#tot").html(--tot);
+                }else{
+                    alert("删除失败");
+                }
 
-		})
+            })
+		}
+
     }
 
 

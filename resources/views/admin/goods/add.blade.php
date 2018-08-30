@@ -33,7 +33,7 @@
 			
 		</div>
 		<div class="panel-body">
-			<form action="/admin/goods" method="post">
+			<form action="/a/goods" method="post">
 					{{csrf_field()}}
 
 				<div class="form-group">

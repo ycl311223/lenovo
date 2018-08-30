@@ -136,7 +136,8 @@
 						<h2 class="panel-title"><span class="glyphicon glyphicon-list-alt"></span> 订单管理</h2>
 					</div>
 					<ul class="list-group">
-					    <li class="list-group-item"><a href="">订单列表</a></li> 	
+					    <li class="list-group-item"><a href="/a/orders">订单列表</a></li>
+						<li class="list-group-item"><a href="/a/orders/statuList">订单状态管理</a></li>
 					</ul>
 				</div>
 				<!-- 评论管理 -->、
@@ -145,7 +146,7 @@
 						<h2 class="panel-title"><span class="glyphicon glyphicon-envelope"></span> 评论管理</h2>
 					</div>
 					<ul class="list-group">
-					    <li class="list-group-item"><a href="">评论列表</a></li>	
+					    <li class="list-group-item"><a href="/a/comment">评论列表</a></li>
 					</ul>
 				</div>
 
