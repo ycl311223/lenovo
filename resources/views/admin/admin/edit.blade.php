@@ -8,14 +8,14 @@
 
 	<div class="form-group">
 		<label for="">密码</label>
-		<input type="password" name="pass" value="{{$data->pass}}" class="form-control" placeholder="请输入密码" >
+		<input type="text" name="pass" value="{{$data->pass}}" class="form-control" placeholder="请输入密码" >
 	</div>
 	<div id="passInfo2">
 
 	</div>
 	<div class="form-group">
 		<label for="">确认密码</label>
-		<input type="password" name="repass" value="{{$data->pass}}" class="form-control" placeholder="请再次输入密码" >
+		<input type="text" name="repass" value="{{$data->pass}}" class="form-control" placeholder="请再次输入密码" >
 	</div>
 	<div class="form-group">
 		<label for="">状态</label>

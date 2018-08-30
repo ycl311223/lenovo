@@ -106,7 +106,7 @@
 						<h2 class="panel-title"><span class="glyphicon glyphicon-user"></span> 会员管理</h2>
 					</div>
 					<ul class="list-group">
-					    <li class="list-group-item"><a href="./user/index.html">会员列表</a></li>
+					    <li class="list-group-item"><a href="/a/user">会员列表</a></li>
 					 	
 					</ul>
 				</div>
@@ -118,7 +118,7 @@
 						<h2 class="panel-title"><span class="glyphicon glyphicon-tasks"></span> 分类管理</h2>
 					</div>
 					<ul class="list-group">
-					    <li class="list-group-item"><a href="">分类列表</a></li> 	
+					    <li class="list-group-item"><a href="/a/types">分类列表</a></li>
 					</ul>
 				</div>
 				<!-- 商品管理 -->
@@ -127,7 +127,7 @@
 						<h2 class="panel-title"><span class="glyphicon glyphicon-gift"></span> 商品管理</h2>
 					</div>
 					<ul class="list-group">
-					    <li class="list-group-item"><a href="">商品列表</a></li> 	
+					    <li class="list-group-item"><a href="/a/goods">商品列表</a></li>
 					</ul>
 				</div>
 				<!-- 订单管理 -->
@@ -136,7 +136,8 @@
 						<h2 class="panel-title"><span class="glyphicon glyphicon-list-alt"></span> 订单管理</h2>
 					</div>
 					<ul class="list-group">
-					    <li class="list-group-item"><a href="">订单列表</a></li> 	
+					    <li class="list-group-item"><a href="/a/orders">订单列表</a></li>
+						<li class="list-group-item"><a href="/a/orders/statuList">订单状态管理</a></li>
 					</ul>
 				</div>
 				<!-- 评论管理 -->、
@@ -145,7 +146,7 @@
 						<h2 class="panel-title"><span class="glyphicon glyphicon-envelope"></span> 评论管理</h2>
 					</div>
 					<ul class="list-group">
-					    <li class="list-group-item"><a href="">评论列表</a></li>	
+					    <li class="list-group-item"><a href="/a/comment">评论列表</a></li>
 					</ul>
 				</div>
 
@@ -155,9 +156,9 @@
 						<h2 class="panel-title"><span class="glyphicon glyphicon-certificate"></span> 系统管理</h2>
 					</div>
 					<ul class="list-group">
-					    <li class="list-group-item"><a href="">系统配置</a></li>
-					    <li class="list-group-item"><a href="">轮播图管理</a></li>
-					    <li class="list-group-item"><a href="">广告管理</a></li>
+					    <li class="list-group-item"><a href="/a/sys/config">系统配置</a></li>
+					    <li class="list-group-item"><a href="/a/sys/slider">轮播图管理</a></li>
+					    <li class="list-group-item"><a href="/a/sys/ads">广告管理</a></li>
 					 	
 					</ul>
 				</div>

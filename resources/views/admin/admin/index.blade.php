@@ -25,8 +25,6 @@
 				
 				<input type="submit" value="搜索" class="btn btn-success">
 			</form>
-
-
 		</div>
 		<table class="table-bordered table table-hover">
 			<th><input type="checkbox" name=""></th>
@@ -42,9 +40,9 @@
 					<td>{{$value->name}}</td>
 					<td>{{date("Y-m-d H:i:s",$value->time)}}</td>
 					@if($value->status)
-						<td>禁用</td>
+						<td><span class="btn btn-danger" onclick="change(this,{{$value->id}},{{$value->status}})">禁用</span></td>
 					@else
-						<td>正常</td>
+						<td><span class="btn btn-success" onclick="change(this,{{$value->id}},{{$value->status}})">正常</span></td>
 
 					@endif
 					<td><a href="javascript:;" onclick="edit({{$value->id}})" data-toggle="modal" data-target="#updateAdmin">编辑</a>
@@ -55,7 +53,7 @@
 		</table>
 		<!-- 分页效果 -->
 		<div class="panel-footer">
-			{{--{{ $data->links() }}--}}
+			{{ $data->links() }}
 		</div>
 	</div>
 </div>			
@@ -197,6 +195,20 @@
                     $("#passInfo2").html(strs)
                 }
             }
+		})
+	}
+
+	function change(obj,id,sta){
+	    $.post('/a/admin/changeSta',{id:id,"_token":"{{csrf_token()}}"},function(data){
+			if(data==1){
+				if(sta==1){
+				    $(obj).parent().html('<span class="btn btn-success" onclick="change(this,'+id+',0)">正常</span>')
+				}else{
+                    $(obj).parent().html('<span class="btn btn-danger" onclick="change(this,'+id+',1)">禁用</span>')
+				}
+			}else{
+			    alert("修改状态失败");
+			}
 		})
 	}
 
