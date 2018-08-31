@@ -15,12 +15,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//后台登录页面
+Route::get("/a/login","Admin\LoginController@index");
 
-// Route::get('/b',function(){
-//     return view('admin.index');
-// });
+//验证码获取
+Route::get('/a/yzm',"Admin\LoginController@yzm");
 
-Route::group(['namespace'=>'Admin','prefix'=>'a'],function(){
+//这里的控制器为啥必须要用反斜杠呢？
+Route::any('/admin/shangchuan',"Admin\CommonController@upload");
+//登录的检查处理操作
+Route::post('/a/check',"Admin\LoginController@check");
+//后台登出
+Route::get('/a/logout',"Admin\LoginController@logout");
+
+
+Route::group(['namespace'=>'Admin','prefix'=>'a','middleware'=>'adminLogin'],function(){
     Route::get('/','IndexController@index');
     Route::resource('admin',"AdminController");
     Route::post('admin/changeSta',"AdminController@changeSta");
@@ -35,6 +44,8 @@ Route::group(['namespace'=>'Admin','prefix'=>'a'],function(){
         Route::resource("sys/config","ConfigsController");
         //轮播图管理
         Route::resource("sys/slider","SliderController");
+        //轮播图修改
+        Route::any("sys/edit","SliderController@edit");
 
         //广告管理
         Route::resource("sys/ads","AdsController");
@@ -55,7 +66,15 @@ Route::group(['namespace'=>'Admin','prefix'=>'a'],function(){
     Route::get("comment","CommentController@index");
     Route::post("comment/ajaxStatu","CommentController@ajaxStatu");
 
+    //学习缓存写的路由
+    Route::get("huancun","HuancunController@index");
+
+    //清楚缓存路由
+    Route::get('flush',"IndexController@flush");
 
 });
-//这里的控制器为啥必须要用反斜杠呢？
-Route::any('/admin/shangchuan',"Admin\CommonController@upload");
+
+//前台路由
+
+    //主页
+    Route::get('/',"Home\IndexController@index");
