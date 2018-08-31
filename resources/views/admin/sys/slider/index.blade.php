@@ -5,7 +5,7 @@
 <!-- 引入CSS -->
 <link rel="stylesheet" href="/up/uploadify.css">
 <!-- 引入JQ -->
-<script src="/style/admin/bs/js/jquery.min.js"></script>
+<script src="/style/admin/public/bs/js/jquery.min.js"></script>
 <!-- 引入文件上传插件 -->
 <script src="/up/jquery.uploadify.min.js"></script>
 <!-- 内容 -->
@@ -52,7 +52,11 @@
 					<td>{{$value->href}}</td>
 					<td>{{$value->title}}</td>
 					<td>{{$value->orders}}</td>
-					<td>操作</td>
+					<td>
+						<a href="/a/sys/edit?id={{$value->id}}">编辑</a>
+
+						<a href="javascript:;" onclick="deletes(this,{{$value->id}})">删除</a>
+					</td>
 				</tr>
 
 
@@ -155,5 +159,16 @@
             }
         });
     });
+
+	function deletes(obj,id){
+		$.post('/a/sys/slider/'+id,{"_token":"{{csrf_token()}}","_method":"delete"},function(data){
+			if(data==1){
+			    alert("删除成功");
+			}else{
+			    alert("删除失败");
+			}
+		})
+	}
+
 </script>
 @endsection

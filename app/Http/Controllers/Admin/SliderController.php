@@ -9,7 +9,7 @@ class SliderController extends Controller
 {
     //
     public function index(){
-        $data=\DB::table('slider')->paginate(2);
+        $data=\DB::table('slider')->paginate(4);
         $tot=\DB::table('slider')->count();
 
         return view('admin.sys.slider.index')->with("data",$data)->with("tot",$tot);
@@ -43,8 +43,24 @@ class SliderController extends Controller
        }else{
            return back()->withInput()->withErrors($validator);
        }
+    }
 
+    public function destroy($id){
+        if(\DB::table('slider')->delete($id)){
+            return 1;
+        }else{
+            return 0;
+        }
+    }
 
-
+    public function edit(Request $request){
+        if($_POST){
+            dd($_POST->all());
+        }else{
+            $id=$request->input("id");
+            $data=\DB::table('slider')->where('id',$id)->get();
+//            dd($data);
+            return view("admin.sys.slider.edit")->with("data",$data);
+        }
     }
 }

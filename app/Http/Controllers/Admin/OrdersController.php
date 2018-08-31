@@ -40,6 +40,7 @@ class OrdersController extends Controller
     }
 
     public function edit(Request $request){
+        //这个是从编辑页面过来的，是真的要修改的。
         if($_POST){
             $sid=$request->input("sid");
             $code=$request->input("code");
@@ -49,8 +50,8 @@ class OrdersController extends Controller
             }else{
                 return back();
             }
-
         }else{
+            //点击“修改状态”按钮时的get请求，直接携带数据转发到编辑页面。
             $data=\DB::table("orderstatu")->get();
             return view("admin.orders.edit")->with("data",$data);
         }
