@@ -164,6 +164,7 @@
 		$.post('/a/sys/slider/'+id,{"_token":"{{csrf_token()}}","_method":"delete"},function(data){
 			if(data==1){
 			    alert("删除成功");
+			    window.location.reload();
 			}else{
 			    alert("删除失败");
 			}

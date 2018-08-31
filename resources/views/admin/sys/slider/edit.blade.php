@@ -3,7 +3,7 @@
 	<!-- 引入CSS -->
 	<link rel="stylesheet" href="/up/uploadify.css">
 	<!-- 引入JQ -->
-	<script src="/style/admin/bs/js/jquery.min.js"></script>
+	<script src="/style/admin/public/bs/js/jquery.min.js"></script>
 	<!-- 引入文件上传插件 -->
 	<script src="/up/jquery.uploadify.js"></script>
 
@@ -25,19 +25,20 @@
 		</div>
 		<div class="panel-body">
 			<form action="" method="post">
+				{{csrf_field()}}
 				<div class="form-group">
 					<label for="">Title</label>
-					<input type="text" name="" value="{{$data[0]->title}}" class="form-control" id="">
+					<input type="text" name="title" value="{{$data[0]->title}}" class="form-control" id="">
 				</div>
 
 				<div class="form-group">
 					<label for="">Orders</label>
-					<input type="text" name="" value="{{$data[0]->orders}}" class="form-control" id="">
+					<input type="text" name="orders" value="{{$data[0]->orders}}" class="form-control" id="">
 				</div>
 
 				<div class="form-group">
 					<label for="">Href</label>
-					<input type="text" name="" value="{{$data[0]->href}}" class="form-control" id="">
+					<input type="text" name="href" value="{{$data[0]->href}}" class="form-control" id="">
 				</div>
 
 				<div class="form-group">
@@ -46,11 +47,11 @@
 					<div id="main">
 						<img width='200px'  src='/Uploads/lun/{{$data[0]->img}}'>
 					</div>
-					<input type="hidden" name="img"  id="imgs">
+					<input type="hidden" name="img"   id="imgs">
 				</div>
 
 				<div class="form-group">
-					<input type="submit" value="提交" onclick="edits()"class="btn btn-success">
+					<input type="submit" value="提交" class="btn btn-success">
 					<input type="reset" value="重置" class="btn btn-danger">
 				</div>
 

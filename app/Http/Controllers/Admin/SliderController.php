@@ -55,7 +55,23 @@ class SliderController extends Controller
 
     public function edit(Request $request){
         if($_POST){
-            dd($_POST->all());
+            $id=$request->input("id");
+            $title=$request->input("title");
+            $orders=$request->input("orders");
+            $href=$request->input("href");
+            $img=$request->input("img");
+            $sql=null;
+            if($img){
+                $sql="update slider set title=$title,orders=$orders,href=$href,img='$img' where id=$id ";
+            }else{
+                $sql="update slider set title=$title,orders=$orders,href=$href where id=$id ";
+            }
+
+            if(\DB::update($sql)){
+                return redirect("/a/sys/slider");
+            }else{
+                return back();
+            }
         }else{
             $id=$request->input("id");
             $data=\DB::table('slider')->where('id',$id)->get();
