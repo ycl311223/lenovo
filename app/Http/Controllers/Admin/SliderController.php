@@ -62,6 +62,11 @@ class SliderController extends Controller
             $img=$request->input("img");
             $sql=null;
             if($img){
+                $data=\DB::table("slider")->where('id',$id)->first();
+                $oimg='../public/Uploads/lun/'.$data->img;
+
+                unlink($oimg);
+
                 $sql="update slider set title=$title,orders=$orders,href=$href,img='$img' where id=$id ";
             }else{
                 $sql="update slider set title=$title,orders=$orders,href=$href where id=$id ";
