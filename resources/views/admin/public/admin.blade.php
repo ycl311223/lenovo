@@ -159,6 +159,7 @@
 					    <li class="list-group-item"><a href="/a/sys/config">系统配置</a></li>
 					    <li class="list-group-item"><a href="/a/sys/slider">轮播图管理</a></li>
 					    <li class="list-group-item"><a href="/a/sys/ads">广告管理</a></li>
+						<li class="list-group-item"><a href="/a/sys/types">分类广告管理</a></li>
 					 	
 					</ul>
 				</div>

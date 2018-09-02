@@ -57,7 +57,7 @@
 					<td>{{$value->price}}</td>
 					<td>{{$value->num}}</td>
 					<td>
-						<a>修改</a>
+						<a href="" >修改</a>
 						<a href="javascript:;" onclick="deletes(this,{{$value->id}})">删除</a>
 					</td>
 

@@ -34,11 +34,11 @@ class IndexController extends Controller
 
         //查询广告
 
-        if($ads=\Cache::get('ads')){
+        if($adss=\Cache::get('ads')){
 
         }else{
-            $ads=\DB::table('ads')->orderBy('sort','desc')->get();
-            \Cache::put("ads",$ads);
+            $adss=\DB::table('ads')->orderBy('sort','desc')->get();
+            \Cache::put("ads",$adss);
         }
 
         //处理左侧数据分类
@@ -49,15 +49,17 @@ class IndexController extends Controller
 
         //处理右侧广告
         foreach ($type as $key => $value){
-            $value->rightAds=\DB::table('typesads')->where([['cid','=',$value->id],['type','=','0']])->get();
+            $value->rightAds=\DB::table('typesads')->where([['cid','=',$value->id],['type','=','0']])->limit(2)->get();
         }
-        dd($type);
+        //明星单品
+        $goods=\DB::table("goods")->limit(6)->orderBy("id","desc")->get();
 
         //将数据放到一个键值对数组中，一次性传给视图
         $data=array(
             'slider'=>$slider,
-            'ads'=>$ads,
+            'adss'=>$adss,
             'type'=>$type,
+            'goods'=>$goods,
         );
         return view("home.index")->with($data);
 

@@ -58,8 +58,6 @@
 						<a href="javascript:;" onclick="deletes(this,{{$value->id}})">删除</a>
 					</td>
 				</tr>
-
-
 			@endforeach
 
 

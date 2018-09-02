@@ -49,6 +49,8 @@ Route::group(['namespace'=>'Admin','prefix'=>'a','middleware'=>'adminLogin'],fun
 
         //广告管理
         Route::resource("sys/ads","AdsController");
+        //分类广告管理
+    Route::resource("sys/types","TypesAdsController");
 
     //订单列表
     Route::get("orders","OrdersController@index");

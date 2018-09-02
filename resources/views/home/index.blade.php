@@ -132,14 +132,13 @@
                             </div>
                             @endforeach
                         </div>
-
+                        <!-- 右侧广告-->
                         <div class="left-tu">
+                           @foreach($one->rightAds as $ads)
                             <a href="">
-                                <img class="classification_img" src="/style/home/img/342d053a-5a5a-4db8-8def-d75dd9c1d12e.jpg">
+                                <img class="classification_img" title="{{$ads->title}}" src="/Uploads/ads/{{$ads->img}}">
                             </a>
-                            <a href="">
-                                <img class="classification_img" src="/style/home/img/cb8df8c8-ac1b-4a75-9cc5-ff6d3724f520.jpg">
-                            </a>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -227,10 +226,11 @@
     </div>
     <div class="boo">
       <ul class="bo-1">
-          @foreach($ads as $key => $value)
+          @foreach($adss as $key => $val)
+                    <!--   这里要是$ads就与上边的$ads冲突了，就会导致这里无法解析出$ads，就会报non-object的错误，非对象           -->
           <li>
             <a target="_blank" href="">
-            <img src="/Uploads/ads/{{$value->img}}">
+            <img src="/Uploads/ads/{{$val->img}}">
             </a>
           </li>
           @endforeach
@@ -247,9 +247,10 @@
       <h3><span><img src="/style/home/img/555.png" alt=""dispaly="none"></span>明星单品</h3>
       <div class="start-xi">
         <ul>
+          @foreach($goods as $good)
           <li style="width: 198px; height: 297px;">
             <a target="_blank" href=""> 
-              <img src="/style/home/img/8.jpg">
+              <img src="/Uploads/goods/{{$good->img}}">
             </a>
             <p class="star_name">
               <a target="_blank" href="">小新Air 12 (6Y30/Windows 10 家庭版/12.2英寸/LTE 4G 48G流量)</a>
@@ -259,86 +260,10 @@
             </p>
             <p class="star_price"><a target="_blank" href="">3,999元</a></p>
           </li>
-          <li  style="width: 198px; height: 297px;">
-           <a target="_blank" href="">
-            <img src="/style/home/img/10.jpg"> 
-          </a>
-          <p class="star_name">
-            <a target="_blank" href="">拯救者 (I5/Windows 10家庭版/14.0英寸/8G/1T)
-            </a>
-          </p>
-          <p class="star_ad">
-            <a target="_blank" href="">强大配置 良心品质</a>
-          </p>
-          <p class="star_price">
-            <a target="_blank" href="">5,499元</a>
-          </p>
-        </li>
-        <li style="width: 198px; height: 297px;">
-         <a target="_blank" href="">
-          <img src="/style/home/img/75.jpg">
-        </a> 
-        <p class="star_name">
-          <a target="_blank" href="">ThinkPad 黑将S5 20G4A000CD 黑色
-          </a>
-        </p>
-        <p class="star_ad">
-          <a target="_blank" href="">黑将临世 生为竞技</a>
-        </p>
-        <p class="star_price">
-          <a target="_blank" href="">6,699元</a>
-        </p>
-       </li>
-       <li  style="width: 198px; height: 297px;">
-        <a target="_blank" href=""> 
-          <img src="/style/home/img/72.jpg">
-        </a>
-        <p class="star_name">
-          <a target="_blank" href="">拯救者 (I7/Windows 10 家庭版/14.0英寸/1T+128G SSD)
-          </a>
-        </p> 
-        <p class="star_ad">
-          <a target="_blank" href=""> 4G大显存  升级固态硬盘
-          </a>
-        </p>
-        <p class="star_price">
-          <a target="_blank" href="">6,999元
-          </a></p>
-       </li>
-       <li  style="width: 198px; height: 297px;">
-        <a target="_blank" href="">
-          <img src="/style/home/img/73.jpg">
-        </a>
-        <p class="star_name">
-          <a target="_blank" href="">联想UM10C直播版手机麦克风 苹果安卓手机主播K歌话筒 玫瑰金</a>
-        </p>
-        <p class="star_ad">
-          <a target="_blank" href="">限时限量送手环
-          </a>
-        </p>
-        <p class="star_price">
-          <a target="_blank" href="">399元</a>
-        </p>
-       </li>
-       <li  style="width: 198px; height: 297px;">
-        <a target="_blank" href="">
-          <img src="/style/home/img/74.jpg">
-        </a>
-        <p class="star_name">
-          <a target="_blank" href="">联想（lenovo）300M无线路由器R3210（黑色）
-          </a>
-        </p>
-        <p class="star_ad">
-          <a target="_blank" href="">6折优惠，就是这么任性
-          </a>
-        </p>
-        <p class="star_price">
-          <a target="_blank" href="">79元</a>
-        </p>
-      </li>
-      <div class='clear'></div>
-    </ul>
-  </div>
+          @endforeach
+          <div class='clear'></div>
+        </ul>
+    </div>
  </div>
 </div>
   <!-- 猜你喜欢 -->
