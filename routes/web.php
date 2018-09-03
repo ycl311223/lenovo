@@ -83,3 +83,6 @@ Route::group(['namespace'=>'Admin','prefix'=>'a','middleware'=>'adminLogin'],fun
 
     //主页
     Route::get('/',"Home\IndexController@index");
+
+    //商品详情路由
+    Route::get('/goods/{id}',"Home\GoodsController@index");

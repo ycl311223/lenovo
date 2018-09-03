@@ -249,16 +249,16 @@
         <ul>
           @foreach($goods as $good)
           <li style="width: 198px; height: 297px;">
-            <a target="_blank" href=""> 
+            <a target="_blank" href="/goods/{{$good->id}}">
               <img title="{{$good->title}}" src="/Uploads/goods/{{$good->img}}">
             </a>
             <p class="star_name">
-              <a title="{{$good->title}}" target="_blank" href="">{{$good->title}}</a>
+              <a title="{{$good->title}}" target="_blank" href="/goods/{{$good->id}}">{{$good->title}}</a>
             </p>
             <p class="star_ad">
-              <a title="{{$good->title}}" target="_blank" href="">${{$good->info}}</a>
+              <a title="{{$good->title}}" target="_blank" href="/goods/{{$good->id}}">${{$good->info}}</a>
             </p>
-            <p class="star_price"><a title="{{$good->title}}" target="_blank" href="">{{number_format($good->price)}}元</a></p>
+            <p class="star_price"><a title="{{$good->title}}" target="_blank" href="/goods/{{$good->id}}">{{number_format($good->price)}}元</a></p>
           </li>
           @endforeach
           <div class='clear'></div>
@@ -286,15 +286,15 @@
        <h3><span>{{$louNum}}F</span><em>{{$lou->name}}</em></h3>
        <div class="jieshao">
             @foreach($lou->zi as $zi)
-            <a target="_blank" href="" title="{{$zi->name}}">{{$zi->name}}</a>
+            <a target="_blank" href="/goods/{{$good->id}}" title="{{$zi->name}}">{{$zi->name}}</a>
             @endforeach
-            <a href="" target="_blank" title="" class="myicon floor_more">更多</a>
+            <a href="/goods/{{$good->id}}" target="_blank" title="" class="myicon floor_more">更多</a>
        </div>
      </div>
      <div class="rong">
        <div class="zuo">
 
-         <a target="_blank" href=""> <img width="240" height="535" title="" src="/Uploads/ads/{{$lou->leftAds->img}}">
+         <a target="_blank" href="/goods/{{$good->id}}"> <img width="240" height="535" title="{{$lou->leftAds->title}}" src="/Uploads/ads/{{$lou->leftAds->img}}">
          </a>
        </div>
        <div class="you">
@@ -303,11 +303,11 @@
           <a target="_blank" href=""  title="{{$louGoods->title}}">
            <img width="164" height="164" title="{{$louGoods->title}}" src="/Uploads/goods/{{$louGoods->img}}" >
           </a>
-          <a class="good-jie"target="_blank" title="{{$louGoods->title}}" href="">{{$louGoods->title}}
+          <a class="good-jie"target="_blank" title="{{$louGoods->title}}" href="/goods/{{$good->id}}">{{$louGoods->title}}
           </a>
-          <a class="good-jie1"target="_blank" href="" title="{{$louGoods->title}}">{{$louGoods->info}}
+          <a class="good-jie1"target="_blank" href="/goods/{{$good->id}}" title="{{$louGoods->title}}">{{$louGoods->info}}
           </a>
-          <a class="money"  target="_blank" href=""  title="{{$louGoods->title}}">{{number_format($louGoods->price)}}
+          <a class="money"  target="_blank" href="/goods/{{$good->id}}"  title="{{$louGoods->title}}">{{number_format($louGoods->price)}}
           </a>
           <span class="good-biao"></span>
          </div>
@@ -328,7 +328,7 @@
                  <ul>
                      <li>
                          <div class="shekuang" datatype="5" sort="1" b_i="190,212,30">
-                             <a target="_blank" href="">
+                             <a target="_blank" href="/goods/{{$good->id}}">
                                  <img width="190" height="212" src="/style/home/img/50.jpg" class="lazy_img"></a>
                              <div class="social-tou"></div>
                              <div class="social-rong">

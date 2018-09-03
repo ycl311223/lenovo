@@ -52,7 +52,6 @@ class IndexController extends Controller
             $value->rightAds=\DB::table('typesads')->where([['cid','=',$value->id],['type','=',0]])->limit(2)->get();
             $value->leftAds=\DB::table('typesads')->where([['cid','=',$value->id],['type','=',1]])->first();
         }
-
         //处理楼层的商品
 
         //遍历一级分类
