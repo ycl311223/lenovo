@@ -14,7 +14,7 @@ class TypesAdsController extends Controller
     }
 
     public function create(){
-        $data=\DB::table("types")->get();
+        $data=\DB::table("types")->where("pid",0)->get();
         return view("admin.sys.types.add")->with("data",$data);
     }
 

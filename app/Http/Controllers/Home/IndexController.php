@@ -49,8 +49,27 @@ class IndexController extends Controller
 
         //处理右侧广告
         foreach ($type as $key => $value){
-            $value->rightAds=\DB::table('typesads')->where([['cid','=',$value->id],['type','=','0']])->limit(2)->get();
+            $value->rightAds=\DB::table('typesads')->where([['cid','=',$value->id],['type','=',0]])->limit(2)->get();
+            $value->leftAds=\DB::table('typesads')->where([['cid','=',$value->id],['type','=',1]])->first();
         }
+
+        //处理楼层的商品
+
+        //遍历一级分类
+        foreach($type as $key => $value){
+            $newArr=array();
+            //遍历二级分类
+            foreach($value->zi as $two ){
+                //遍历三级分类
+                foreach($two->zi as $three){
+                    $newArr[]=$three->id;
+                }
+            }
+            //查询对应的商品
+            $value->goods=\DB::table("goods")->whereIn("cid",$newArr)->limit(8)->get();
+
+        }
+
         //明星单品
         $goods=\DB::table("goods")->limit(6)->orderBy("id","desc")->get();
 

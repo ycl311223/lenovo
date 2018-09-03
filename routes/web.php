@@ -37,7 +37,10 @@ Route::group(['namespace'=>'Admin','prefix'=>'a','middleware'=>'adminLogin'],fun
     Route::resource('types',"TypesController");
 
     Route::resource('user',"UserController");
+    //商品管理
     Route::resource('goods',"GoodsController");
+    //商品编写
+    Route::any('goods/good/edit',"GoodsController@edit");
 
     //后台的系统管理
         //系统管理

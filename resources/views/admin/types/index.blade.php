@@ -69,7 +69,7 @@
 						@endif
 					</td>
 					<td>
-						<a>修改</a>
+						<a >修改</a>
 						<a href="javascript:;" onclick="del({{$value->id}})">删除</a>
 					</td>
 				</tr>

@@ -19,8 +19,8 @@
 	
 	<ol class="breadcrumb">
 		<li><a href="#"><span class="glyphicon glyphicon-home"></span> 首页</a></li>
-		<li><a href="#">商品管理</a></li>
-		<li class="active">商品添加</li>
+		<li><a href="#">分类管理</a></li>
+		<li class="active">分类添加</li>
 
 		<button class="btn btn-primary btn-xs pull-right"><span class="glyphicon glyphicon-refresh"></span></button>
 	</ol>
@@ -28,77 +28,43 @@
 	<!-- 面版 -->
 	<div class="panel panel-default">
 		<div class="panel-heading">
-			<a href="index.html" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> 商品页面</a>
-			<a href="" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> 添加商品</a>
+			<a href="index.html" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> 分类页面</a>
+			<a href="" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> 添加分类</a>
 			
 		</div>
 		<div class="panel-body">
-			<form action="/a/goods" method="post">
+			<form action="/a/types" method="post">
 					{{csrf_field()}}
-
 				<div class="form-group">
-					<label for="">商品名</label>
-					<input type="text" name="title" placeholder="请输入商品名" class="form-control" id="">
+					<label for="">分类名</label>
+					<input type="text" name="name" placeholder="请输入分类名" class="form-control" id="">
+					<input type="hidden" name="pid" value="<?php echo isset($_GET['pid'])?$_GET['pid']:0;?>">
+					<input type="hidden" name="path" value="<?php echo isset($_GET['path'])?$_GET['path']:'0,';?>">
 				</div>
 				<div class="form-group">
-					<label for="">商品简介</label>
-					<textarea name="info" id="" class="form-control"  placeholder="请输入商品简介"></textarea>
-				</div>
-				<div class="form-group">
-					<label for="">商品所属分类</label>
-					<select name="cid" class="form-control" id="">
-						<option value="">请选择商品分类</option>
-
-						@foreach($data as $value)
-							
-							@if($value->size==2)
-								<option value="{{$value->id}}">{{$value->html}}</option>
-
-							@else
-								<option disabled value="{{$value->id}}">{{$value->html}}</option>
-
-							@endif
-
-
-						@endforeach
-					</select>
-				</div>
-				<div class="form-group">
-					<label for="">商品价格</label>
-					<input type="text" name="price" placeholder="请输入商品价格" class="form-control" id="">
+					<label for="">TITLE</label>
+					<input type="text" name="title" placeholder="请输入标题" class="form-control" id="">
 				</div>
 
 				<div class="form-group">
-					<label for="">商品库存</label>
-					<input type="text" name="num" placeholder="请输入商品库存" class="form-control" id="">
+					<label for="">KEYWORD</label>
+					<input type="text" name="keywords" placeholder="请输入关键词" class="form-control" id="">
 				</div>
 
 				<div class="form-group">
-					<label for="">商品封面图片</label>
-					<input type="file" name="" id="uploads">
-					<div id="main">
-
-					</div>
-					<input type="hidden" name="img" id="imgs">
-
-				<div class="form-group">
-					<label for="">商品多图片</label>
-					<input type="file" name="" id="uploads1">
-					<div id="main1">
-						
-					</div>
-					<input type="hidden" name="imgs" id="imgs1">
-				</div>
-
-
-				<div class="form-group">
-					<label for="">商品简介</label>
-					<script id="editor" type="text/plain" name="text" style="width:100%;height:300px;"></script>
+					<label for="">DESCRIPTION</label>
+					<input type="text" name="description" placeholder="请输入描述" class="form-control" id="">
 				</div>
 
 				<div class="form-group">
-					<label for="">商品配置</label>
-					<script id="editor1" type="text/plain" name="config" style="width:100%;height:300px;"></script>
+					<label for="">SORT</label>
+					<input type="text" name="sort" placeholder="请输入排序" class="form-control" id="">
+				</div>
+				<div class="form-group">
+					<label for="">是否楼层</label>
+					<br>
+					<input type="radio" name="is_lou" value="1" id="">是
+					<input type="radio" name="is_lou" value="0" checked id="">否
 				</div>
 
 				<div class="form-group">
@@ -115,7 +81,7 @@
 <script>
 	// 当所有HTML代码都加载完毕
 	$(function() {
-		// 商品详情的百度编辑器调用
+		// 分类详情的百度编辑器调用
 		var ue = UE.getEditor('editor');
 		var ue1 = UE.getEditor('editor1');
 		// 声明字符串
@@ -148,7 +114,7 @@
             }
         });
 
-        // 商品的多图片上传
+        // 分类的多图片上传
 		var imgs1='';
 
 		var arr=[];
