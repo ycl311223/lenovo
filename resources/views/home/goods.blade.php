@@ -31,6 +31,7 @@
 	                        <img width="544px" height="544px" src="/Uploads/goods/{{$img->img}}" alt="{{$goods->title}}">
                         </a></li>
 						@endforeach
+
                 </ul>
                 <div class="img-x">
 					<ul class="pro_ul" id="imgSmall" style="width: 408px;">
@@ -118,45 +119,12 @@
 		            
 					<!-- 商品规格 -->
 		<div class="xilei">
-			{{--<ul>--}}
-    			{{--<li class="clearfix">--}}
-	    			{{--<span class="qj" typeid="e430ee78-7b11-4437-9ca2-2201807640d0">E系列15寸：</span>--}}
-	    			{{--<div class="xilei-main">--}}
-		    			{{--<span id="b2306585-0b8a-11e6-943c-0050569f0752" class="de_sec_sel click_radio2 active" latag="latag_pc_detail_choose_48639_E系列15寸_b2306585-0b8a-11e6-943c-0050569f0752">i5 4GB 500GB机械 标准版</span>--}}
-		    			{{--<span id="b23e5d38-0b8a-11e6-943c-0050569f0752" class="de_sec_sel click_radio2" latag="latag_pc_detail_choose_48639_E系列15寸_b23e5d38-0b8a-11e6-943c-0050569f0752">i5  4GB  1TB机械   标准版</span>--}}
-		    			{{--<span id="b245b8df-0b8a-11e6-943c-0050569f0752" class="de_sec_sel click_radio2" latag="latag_pc_detail_choose_48639_E系列15寸_b245b8df-0b8a-11e6-943c-0050569f0752">i5 8GB 500GB机械 标准版</span>--}}
-		    			{{--<span id="8a990b5f-18dd-11e6-943c-0050569f0752" class="de_sec_sel click_radio2" latag="latag_pc_detail_choose_48639_E系列15寸_8a990b5f-18dd-11e6-943c-0050569f0752">i7 4GB 500GB机械 定制版</span>--}}
-		    			{{--<span id="b24c64c5-0b8a-11e6-943c-0050569f0752" class="de_sec_sel click_radio2" latag="latag_pc_detail_choose_48639_E系列15寸_b24c64c5-0b8a-11e6-943c-0050569f0752">i7  8GB   1TB机械   定制版</span>--}}
-		    			{{--<span id="9853e1ee-6380-11e6-b8c7-0050569f0752" class="de_sec_sel click_radio2" latag="latag_pc_detail_choose_48639_E系列15寸_9853e1ee-6380-11e6-b8c7-0050569f0752">i5 8GB 1TB机械 定制版</span>--}}
-		    	{{--</li>--}}
-		    {{--</ul>--}}
+
 		<div>
 						<!-- ThinkPad 私人订制 -->
 						
 		<div class="xuan" style="">
-		    {{--<ul>--}}
-		        {{--<li class="clearfix">--}}
-		            {{--<span class="qj">选择服务：</span>--}}
-		           {{--<div class='fuwrap'>--}}
-		            {{--<div class="fuwub">--}}
-   		            	{{--<span class="abb"itle="2年内提供由于意外情况（摔、瞌、碰、进液）导致的机器故障及外观损坏保修服务"  class="selectOption click_checkbox"><i class="guan"></i>Think笔记本2年意外保修 ￥509</span> --}}
-   		            	{{--<ul>--}}
-   		            	 {{--<li title="1年内提供由于意外情况（摔、瞌、碰、进液）导致的机器故障及外观损坏保修服务" latag="latag_pc_detail_chooseservice_48639_51725" sort="1" data-code="51725"><i class="guan"></i>Think笔记本1年意外保修 ￥255</li>--}}
-   		            	  {{--<span class="guan shows show_down"></span>  --}}
-   		            	{{--</ul>--}}
-   		            	{{----}}
-   		            {{--</div>--}}
-   {{----}}
-   	            	  {{--<div class="fuwus">--}}
-   	            	  	{{--<span title="2年内提供全国范围免费上门维修服务" latag="latag_pc_detail_chooseservice_48639_51728" sort="0" data-code="51728" class="selectOption click_checkbox"><i class="guan"></i>Think笔记本2年上门服务（全国） ￥579</span>--}}
-   	            	   {{--</div>--}}
-   	            	   {{--<div class="fuh">--}}
-   	            	  	{{--<span title="2年内提供机械硬盘故障换新，旧盘不回收服务" latag="latag_pc_detail_chooseservice_48639_51730" sort="0" data-code="51730" class="selectOption click_checkbox"><i class="guan"></i>Think笔记本2年硬盘不回收 ￥249</span> --}}
-   	            	  {{--</div>--}}
-   	            	{{--</div>--}}
-		            {{--</div>--}}
-		        {{--</li>--}}
-		    {{--</ul>--}}
+
 		</div>
 				
 							<!-- 分期文案 -->
@@ -478,391 +446,13 @@
             <div id="content">
 					<!-- 商品详情 -->
 				<ul class="rt-box">
-				<p>
-					<img class="lazy" src="/style/home/img/1_3.jpg" data-original="http://p4.lefile.cn/product/adminweb/2016/05/31/1_3.jpg" style="">
-				</p>
-				<p>
-					<img class="lazy" src="/style/home/img/3_3.jpg" data-original="http://p2.lefile.cn/product/adminweb/2016/05/31/3_3.jpg" style="">
-				</p>
-				<p>
-				  <img class="lazy" src="/style/home/img//4_3.jpg" data-original="http://p4.lefile.cn/product/adminweb/2016/05/31/4_3.jpg" style="">
-				</p>
-				<p>
-				  <img class="lazy" src="/style/home/img/5_3.jpg" data-original="http://p2.lefile.cn/product/adminweb/2016/05/31/5_3.jpg" style="">
-				</p>
-				<p>
-				  <img class="lazy" src="/style/home/img//6_3.jpg" data-original="http://p4.lefile.cn/product/adminweb/2016/05/31/6_3.jpg" style="">
-				</p>
-				<p>
-					<img class="lazy" src="/style/home/img/9_3.jpg" data-original="http://p2.lefile.cn/product/adminweb/2016/05/31/9_3.jpg" style=""></p>
-				<p>
-				  <img class="lazy" src="/style/home/img/10_3.jpg" data-original="http://p4.lefile.cn/product/adminweb/2016/05/31/10_3.jpg" style=""
-				</p>
-				<p>
-				  <img class="lazy" src="/style/home/img/13_2.jpg" data-original="http://p3.lefile.cn/product/adminweb/2016/05/31/13_2.jpg" style="">
-				</p>
-				<p>
-				  <img class="lazy" src="/style/home/img/14_2.jpg" data-original="http://p4.lefile.cn/product/adminweb/2016/05/31/14_2.jpg" style="">
-				</p>
-				<p>
-				  <img class="lazy" src="/style/home/img/16.jpg" data-original="http://p4.lefile.cn/product/adminweb/2016/05/31/16.jpg" style="">
-				</p>
-				<span>
-				  <img class="lazy"height="268px" src="/style/home/img/258.jpg" data-original="http://p3.lefile.cn/product/adminweb/2016/05/31/18.jpg" style="">
-				<span>
-
+					{!!$goods->text!!}
 				</ul>	
 
 					<!-- 配置信息 -->
-
-
-	<ul>
-    <div class="ns_attributes-list">                         
-        <div class="ns_hd">
-                商品编号：20DFA08ECD
-    	</div>                         
-	    <div class="ns_bd">                             
-	        <table cellpadding="0" cellspacing="1" border="0">                                 
-	            <tbody>
-	            
-                    <tr>                                         
-                        <th colspan="2" style=" font-weight:900; font-size:15px;">处理器/操作系统</th>                     
-                    </tr>
-                    <tr> 
-                        <th>
-                            CPU                                         
-                        </th>                                        
-                        <td>
-                            第五代英特尔®酷睿™i5-5200U处理器(2.2GHz睿频至2.7GHz,3MB)                                     
-                        </td>                                        
-                    </tr>
-                    <tr> 
-                        <th>
-                            操作系统                                         
-                        </th>                                        
-                        <td>
-                            Windows 10 家庭版                                     
-                        </td>                                        
-                    </tr>
-                    <tr> 
-                        <th>
-                            CPU类型                                         
-                        </th>                                        
-                        <td>
-                            i5                                     
-                        </td>                                        
-                    </tr>
-                    <tr> 
-                        <th>
-                            CPU型号                                         
-                        </th>                                        
-                        <td>
-                            i5-5200U                                     
-                        </td>                                        
-                    </tr>
-                    <tr> 
-                        <th>
-                            CPU主频                                         
-                        </th>                                        
-                        <td>
-                            2.2GHz                                     
-                        </td>                                        
-                    </tr>
-                    <tr> 
-                        <th>
-                            最高睿频                                         
-                        </th>                                        
-                        <td>
-                            2.7GHz                                     
-                        </td>                                        
-                    </tr>
-                    <tr> 
-                        <th>
-                            三级缓存                                         
-                        </th>                                        
-                        <td>
-                            3MB                                     
-                        </td>                                        
-                    </tr>
-                    <tr> 
-                        <th>
-                            核心/线程数                                         
-                        </th>                                        
-                        <td>
-                            双核                                     
-                        </td>                                        
-                    </tr>
-
-					<tr>                                         
-					<th colspan="2" style=" font-weight:900; font-size:15px;">内存</th>                     
-					</tr>
-					                    <tr> 
-					                        <th>
-					                            内存容量                                         
-					                        </th>                                        
-					                        <td>
-					                            4GB                                     
-					                        </td>                                        
-					                    </tr>
-					                    <tr> 
-					                        <th>
-					                            内存类型                                         
-					                        </th>                                        
-					                        <td>
-					                            DDR3L                                     
-					                        </td>                                        
-					                    </tr>
-					                    <tr> 
-					                        <th>
-					                            内存频率                                         
-					                        </th>                                        
-					                        <td>
-					                            1600MHz                                     
-					                        </td>                                        
-					                    </tr>
-					                    <tr> 
-					                        <th>
-					                            插槽数量                                         
-					                        </th>                                        
-					                        <td>
-					                            2                                     
-					                        </td>                                        
-					                    </tr>
-
-					<tr>                                         
-					<th colspan="2" style=" font-weight:900; font-size:15px;">硬盘</th>                     
-					</tr>
-					                    <tr> 
-					                        <th>
-					                            硬盘容量                                         
-					                        </th>                                        
-					                        <td>
-					                            500GB                                     
-					                        </td>                                        
-					                    </tr>
-					                    <tr> 
-					                        <th>
-					                            转速                                         
-					                        </th>                                        
-					                        <td>
-					                            HDD 7200rpm                                     
-					                        </td>                                        
-					                    </tr>
-					                    <tr> 
-					                        <th>
-					                            接口类型                                         
-					                        </th>                                        
-					                        <td>
-					                            SATA 串行                                     
-					                        </td>                                        
-					                    </tr>
-					                    <tr> 
-					                        <th>
-					                            硬盘类型                                         
-					                        </th>                                        
-					                        <td>
-					                            机械硬盘                                     
-					                        </td>                                        
-					                    </tr>
-
-					<tr>                                         
-					<th colspan="2" style=" font-weight:900; font-size:15px;">屏幕</th>                     
-					</tr>
-					                    <tr> 
-					                        <th>
-					                            屏幕类型                                         
-					                        </th>                                        
-					                        <td>
-					                            LED背光                                     
-					                        </td>                                        
-					                    </tr>
-					                    <tr> 
-					                        <th>
-					                            屏幕尺寸                                         
-					                        </th>                                        
-					                        <td>
-					                            15.6英寸                                     
-					                        </td>                                        
-					                    </tr>
-
-					<tr>                                         
-					<th colspan="2" style=" font-weight:900; font-size:15px;">显卡</th>                     
-					</tr>
-					                    <tr> 
-					                        <th>
-					                            显卡类型                                         
-					                        </th>                                        
-					                        <td>
-					                            独立显卡                                     
-					                        </td>                                        
-					                    </tr>
-					                    <tr> 
-					                        <th>
-					                            显示芯片                                         
-					                        </th>                                        
-					                        <td>
-					                            AMD® Radeon™ R7 M265                                     
-					                        </td>                                        
-					                    </tr>
-					                    <tr> 
-					                        <th>
-					                            显存容量                                         
-					                        </th>                                        
-					                        <td>
-					                            独立2GB                                     
-					                        </td>                                        
-					                    </tr>
-
-					<tr>                                         
-					<th colspan="2" style=" font-weight:900; font-size:15px;">光驱</th>                     
-					</tr>
-					                    <tr> 
-					                        <th>
-					                            光驱                                         
-					                        </th>                                        
-					                        <td>
-					                            无                                     
-					                        </td>                                        
-					                    </tr>
-
-					<tr>                                         
-					<th colspan="2" style=" font-weight:900; font-size:15px;">多媒体</th>                     
-					</tr>
-					                    <tr> 
-					                        <th>
-					                            摄像头                                         
-					                        </th>                                        
-					                        <td>
-					                            英特尔® 实感™ 3D 摄像头                                     
-					                        </td>                                        
-					                    </tr>
-					                    <tr> 
-					                        <th>
-					                            扬声器                                         
-					                        </th>                                        
-					                        <td>
-					                            内置扬声器                                     
-					                        </td>                                        
-					                    </tr>
-					                    <tr> 
-					                        <th>
-					                            麦克风                                         
-					                        </th>                                        
-					                        <td>
-					                            内置麦克风                                     
-					                        </td>                                        
-					                    </tr>
-
-					<tr>                                         
-					<th colspan="2" style=" font-weight:900; font-size:15px;">输入设备</th>                     
-					</tr>
-					                    <tr> 
-					                        <th>
-					                            指纹识别                                         
-					                        </th>                                        
-					                        <td>
-					                            不支持                                     
-					                        </td>                                        
-					                    </tr>
-					                    <tr> 
-					                        <th>
-					                            指取设备                                         
-					                        </th>                                        
-					                        <td>
-					                            多点触摸板 Trackpoint指点杆                                     
-					                        </td>                                        
-					                    </tr>
-
-					<tr>                                         
-					<th colspan="2" style=" font-weight:900; font-size:15px;">I/O接口</th>                     
-					</tr>
-					                    <tr> 
-					                        <th>
-					                            视频接口                                         
-					                        </th>                                        
-					                        <td>
-					                            HDMI                                     
-					                        </td>                                        
-					                    </tr>
-					                    <tr> 
-					                        <th>
-					                            音频接口                                         
-					                        </th>                                        
-					                        <td>
-					                            耳机、麦克风二合一接口                                     
-					                        </td>                                        
-					                    </tr>
-					                    <tr> 
-					                        <th>
-					                            读卡器                                         
-					                        </th>                                        
-					                        <td>
-					                            4合1读卡器                                     
-					                        </td>                                        
-					                    </tr>
-
-					<tr>                                         
-					<th colspan="2" style=" font-weight:900; font-size:15px;">网络通信</th>                     
-					</tr>
-					                    <tr> 
-					                        <th>
-					                            无线网卡                                         
-					                        </th>                                        
-					                        <td>
-					                            Realtek BGN                                     
-					                        </td>                                        
-					                    </tr>
-					                    <tr> 
-					                        <th>
-					                            蓝牙                                         
-					                        </th>                                        
-					                        <td>
-					                            支持  蓝牙4.0                                     
-					                        </td>                                        
-					                    </tr>
-
-					<tr>                                         
-					<th colspan="2" style=" font-weight:900; font-size:15px;">电源</th>                     
-					</tr>
-					                    <tr> 
-					                        <th>
-					                            电池                                         
-					                        </th>                                        
-					                        <td>
-					                            6芯 锂离子电池                                     
-					                        </td>                                        
-					                    </tr>
-
-					<tr>                                         
-					<th colspan="2" style=" font-weight:900; font-size:15px;">外观</th>                     
-					</tr>
-					                    <tr> 
-					                        <th>
-					                            颜色                                         
-					                        </th>                                        
-					                        <td>
-					                            黑色                                     
-					                        </td>                                        
-					                    </tr>
-
-					<tr>                                         
-					<th colspan="2" style=" font-weight:900; font-size:15px;">保修信息</th>                     
-					</tr>
-										<tr> 
-											<th>
-											保修政策                                         
-											</th>                                        
-											<td>
-											全国联保，享受三包服务                                     
-											</td>                                        
-										</tr>
-	                        
-	         	   </tbody>                             
-	      		  </table>                         
-	    		</div>                     
-			</div>
-
-			</ul>
+				<ul>
+					{!!$goods->config!!}
+				</ul>
                                                                             
 			<ul id="pingjia_body" style="display: none;">
 
@@ -875,191 +465,32 @@
     <div id="pager_divdiv3" class="ns_discusspager">
 	<div class="ns_comment-inner" id="sppl_box">
 		<dl id="sppl_title"> 
-	 <dt>
-	 	<b>91</b>
-	<span>&nbsp;%</span>
-	<p>好评率</p>
-</dt> 
-	  <dd class="sppl_total active" data-level="0">全部评价(<span>1512</span>)
-</dd>  
-	 <dd class="sppl_good" data-level="3">好评(<span>1372</span>)</dd> 
-	  <dd class="sppl_medium" data-level="2">中评(<span>109</span>)</dd>  
-	   <dd class="sppl_total" data-level="1">差评(<span>31</span>)
-	</dd> 
-	 <dd class="sppl_picnum" data-level="9">有图片的评价(<span>330</span>)</dd>
-	</dl>
+			<dt>
+				<b>{{round((($arr['goodTot']/$arr['commonTot'])*100))}}</b>
+				<span>&nbsp;%</span>
+				<p>好评率</p>
+			</dt>
+	  		<dd class="sppl_total active" data-level="0">全部评价(<span>{{$arr['commonTot']}}</span>)</dd>
+			<dd class="sppl_good" data-level="3">好评(<span>{{$arr['goodTot']}}</span>)</dd>
+	  		<dd class="sppl_medium" data-level="2">中评(<span>{{$arr['zhongTot']}}</span>)</dd>
+	   		<dd class="sppl_total" data-level="1">差评(<span>{{$arr['chaTot']}}</span>)</dd>
+	 		<dd class="sppl_picnum" data-level="9">有图片的评价(<span>330</span>)</dd>
+		</dl>
         <dl id="sppl_list" class="clearfix">
-				<dd>  
-					<div class="sppl_top">  
-					<span class="sppl_score score_4"></span>   
-					<span class="sppl_username">匿名</span>   
-					<span class="sppl_time">2016-11-14 15:13:10</span>  
-					</div>  
-					<div class="sppl_user_box">
-					<p><a class="clickpl" uuid="9ffce34a-deda-483c-8754-833b29421f76" href="javascript:void(0);">还不错  </a>
-					</p> 
-					</div>   
-					<div class="sppl_admin_box clearfix">   
-					<p>尊敬的用户您好，感谢您一直以来对联想的支持，您的支持是我们的最大动力，您的快乐是我们最大的心愿，您的脚步是我们最大的期盼，您的到来给我们增添了无限光彩。感谢您选择联想商城，我们的品质适合有品位的您，祝您生活愉快。</p>   
-					<span class="fr">联想客服&nbsp;&nbsp;2016/11/14 15:19:59</span>       
-					</div>   
-				</dd>
-				<dd>   
-					<div class="sppl_top">   
-					<span class="sppl_score score_5"></span>    
-					<span class="sppl_username">1***9</span> 
-					<span class="sppl_time">2016-11-14 14:14:23</span>  
-					</div> 
-					<div class="sppl_user_box">   
-					<p>
-					<a class="clickpl" uuid="3df47bd9-9f41-4ece-a750-fc3a2a8944ca" href="javascript:void(0);">不错，满意</a></p>   
-					</div>  
-					<div class="sppl_admin_box clearfix">        
-					<p>尊敬的用户您好，感谢您一直以来对联想的支持，您的支持是我们的最大动力，您的快乐是我们最大的心愿，您的脚步是我们最大的期盼，您的到来给我们增添了无限光彩。感谢您选择联想商城，我们的品质适合有品位的您，祝您生活愉快。</p>     
-					<span class="fr">联想客服&nbsp;&nbsp;2016/11/14 14:14:52</span>    
-					</div>         
-				</dd>
-				<dd> 
-					<div class="sppl_top">   
-						<span class="sppl_score score_5"></span>   
-						<span class="sppl_username">1***4</span>   
-						<span class="sppl_time">2016-11-14 13:35:10</span>  
-					</div> 
-					<div class="sppl_user_box">    
-					 <p>
-					<a class="clickpl" uuid="5da14c78-556d-4112-999c-ee54b6d606e8" href="javascript:void(0);">东西不错，就是系统不习惯！</a
-					></p> 
-					</div>  
-					<div class="sppl_user_imgbox">  
-					<div class="sppl_simg_box">    
-						<ul class="sppl_simg_list clearfix">     
-							<li>
-
-							<img src="http://zhongchou.app.lefile.cn/image/20161114/ae84a32e9b7d4bada39fddc2a97160b9.w60xh60.png">
-							<span class="jiao"></span>
-							</li>         
-						</ul>  
-					</div>   
-				<div class="sppl_bimg_box clearfix">      
-				<ul class="sppl_bimg_list clearfix">                 
-				<li class="active">
-				<img src="http://zhongchou.app.lefile.cn/image/20161114/ae84a32e9b7d4bada39fddc2a97160b9.png "></li>    
-				</ul>      
-				<b class="sppl_imgbt_left"></b>   
-
-				<b class="sppl_imgbt_right"></b>   
-				</div>
-				</div>              
-				<div class="sppl_admin_box clearfix">  
-				<p>尊敬的用户您好，感谢您一直以来对联想的支持，您的支持是我们的最大动力，您的快乐是我们最大的心愿，您的脚步是我们最大的期盼，您的到来给我们增添了无限光彩。感谢您选择联想商城，我们的品质适合有品位的您，祝您生活愉快。</p>   
-				<span class="fr">联想客服&nbsp;&nbsp;2016/11/14 14:10:03</span>   
-				</div>       
-				</dd>
-				<dd> 
-					<div class="sppl_top">   
-						<span class="sppl_score score_2"
-						</span>  
-						<span class="sppl_username">z***m</span>  
-						<span class="sppl_time">2016-11-14 13:24:03</span>   
-					</div>  
-					<div class="sppl_user_box">   
-						<p><a class="clickpl" uuid="fa518a95-5ecf-45bc-adbd-3b0378fa13a5" href="javascript:void(0);">整体还好，配置不错，但是屏幕不给力啊……亮度也偏低……</a>
-						</p>   
-					</div>     
-					<div class="sppl_admin_box clearfix">   
-						<p>尊敬的用户您好，感谢您一直以来对联想的支持，调节屏幕亮度方法是：点击Win10系统左下角的开始菜单，在点击弹出菜单上的电脑设置，在电脑设置对话框的左上角可以看到“...”图标，点击后弹出下拉菜单，再点击下拉菜单上的设置，点击后，在右下角可以看到亮度，点击亮度就可以设置了，点击亮度后，调节活动块就可以调节Win10屏幕亮度了。感谢您选择联想商城，我们的品质适合有品位的您，祝您生活愉快。</p>   
-						<span class="fr">联想客服&nbsp;&nbsp;2016/11/14 14:40:31</span> 
-					</div>     
-				</dd>
+				@foreach($comment as $com)
 				<dd>
-					<div class="sppl_top">   
-						<span class="sppl_score score_1">
-						</span>   
-						<span class="sppl_username">匿名</span>  
-						<span class="sppl_time">2016-11-14 13:01:05</span> 
-					</div>  
-					<div class="sppl_user_box">  
-						<p><a class="clickpl" uuid="5698de77-2933-4156-b7cc-e49f9e94f3b5" href="javascript:void(0);">到手你就降了400块，我去</a></p> 
-					</div>           
-						<div class="sppl_admin_box clearfix">        
-						<p>尊敬的用户您好，关于差价问题我们也很理解您的心情，双十一期间，电商均会进行促销活动，价格会根据营销活动内容不同，略有差异，营销活动都是有固定期限的，结束后价格会有上下调整，促销也属于合理的营销途径，所以给您带来的不佳体验非常抱歉，还请您谅解。若您有任何疑问请及时联系商城客服咨询解决，我们竭诚为您服务。祝您生活愉快！</p>    
-					   <span class="fr">联想客服&nbsp;&nbsp;2016/11/14 14:23:30</span>     
-					</div>        
-				</dd>
-				<dd>  
-				<div class="sppl_top">   
-					<span class="sppl_score score_4">
-					</span>  
-					<span class="sppl_username">1***3</span> 
-					<span class="sppl_time">2016-11-14 12:59:57</span>  
-				</div>  
-				<div class="sppl_user_box">   
-				<p>
-					<a class="clickpl" uuid="2ed99603-c7b7-4ebf-bfa8-6a110b32a9c2" href="javascript:void(0);">电脑已到，快递棒棒哒。有一处漏光，不过已经有自己准备了。有个缺点，咋不送包！</a>
-					</p> 
-					</div>         
-					<div class="sppl_admin_box clearfix">   
-					<p>尊敬的用户您好，感谢您一直以来对联想的支持，机器官方标配：笔记本*1，电源适配器*1，电脑包属于选件需要单独购买的；由于目前市场上在用的IPS液晶屏均会存在机率性的漏光现象，如果只是在全黑场或是暗场环境下能看到有漏光的现象，大部分情况是不影响电脑寿命和正常使用的。如有其它疑问欢迎随时咨询商城客服解答，我们致力于服务好每一位用户，祝您生活愉快。
-					</p>     
-					<span class="fr">联想客服&nbsp;&nbsp;2016/11/14 14:45:12</span>   
-				</div>   
-				</dd>
-				<dd> 
-					<div class="sppl_top">  
-						<span class="sppl_score score_3"></span>  
-						<span class="sppl_username">1***6</span>     <span class="sppl_time">2016-11-14 10:13:56</span>   
-					</div>  
-					<div class="sppl_user_box">  
+					<div class="sppl_top">
+						<span td style="color: red">{{str_repeat("★",$com->start)}}{{str_repeat("☆",5-$com->start)}}</span>
+						<span class="sppl_username">匿名</span>
+						<span class="sppl_time">{{date("Y-m-d H:i:s",$com->time)}}</span>
+					</div>
+					<div class="sppl_user_box">
 						<p>
-						<a class="clickpl" uuid="0a1c6dcc-ddd1-4474-a862-497abfcc563b" href="javascript:void(0);">唯一一点不好的就是硬盘，你敢相信就装个lol硬盘的使用率就99%了，瞬间卡的不要不要的，我真搞不懂联想怎么想的，这么高配的电脑配置却配个5400转的硬盘，读写到200多兆每秒时就爆了，真的垃圾，打算换个固态好了。其他的都不错，真是可惜了……回去再检测一下硬件看看</a>
-						</p>  
-					</div>     
+							<a class="clickpl" uuid="9ffce34a-deda-483c-8754-833b29421f76" href="javascript:void(0);">还不错  </a>
+						</p>
+					</div>
 				</dd>
-				<dd> 
-					<div class="sppl_top">   
-						<span class="sppl_score score_4">
-						</span>    
-						<span class="sppl_username">1***7</span>    
-						<span class="sppl_time">2016-11-14 09:48:28</span>   </div>  
-					<div class="sppl_user_box">  
-						<p><a class="clickpl" uuid="7f0c1d3e-1092-486c-8761-76c3b152e255" href="javascript:void(0);">总体来说还可以，问题还是那些 字体模糊，需要调分辨率，轻微漏光  不满意的就是买完就降价 很恶心 </a></p>  
-						</div>        
-						<div class="sppl_admin_box clearfix">          <p>尊敬的用户您好，关于差价问题我们也很理解您的心情，但是商城会不定期的进行促销活动，价格会根据营销活动内容不同，略有差异，营销活动都是有固定期限的，结束后价格会有上下调整，促销也属于合理的营销途径，所以给您带来的不佳体验非常抱歉，还请您谅解。若您有任何疑问请及时联系商城客服咨询解决，我们竭诚为您服务。感谢您选择联想商城，我们的品质适合有品位的您，祝您生活愉快。
-						</p>  
-					<span class="fr">联想客服&nbsp;&nbsp;2016/11/14 17:22:03</span>      
-					</div> 
-				</dd>
-				<dd> 
-					<div class="sppl_top">  
-						<span class="sppl_score score_1"></span>   
-						<span class="sppl_username">1***2</span>   
-						<span class="sppl_time">2016-11-14 09:41:44</span> 
-					</div>  
-					<div class="sppl_user_box">    
-					<p>
-					<a class="clickpl" uuid="03b44299-7294-479b-b3b9-cf754ef5ee49" href="javascript:void(0);">苦等2月有货  三月前这款典藏版6499元，涨6999元双11    6799买了，今天到货鼠标垫都送了，没鼠标</a></p>   
-					</div>      
-					 <div class="sppl_admin_box clearfix">        
-					<p>尊敬的用户您好，感谢您一直以来对联想的支持，由于商城会不定期的进行促销活动，价格会根据营销活动内容不同，略有差异，营销活动都是有固定期限的，结束后价格会有上下调整，促销也属于合理的营销途径，所以给您带来的不佳体验非常抱歉，还请您谅解。机器官方标配：笔记本*1，电源适配器*1，鼠标属于选件需要您根据个人喜好单独购买的哦。感谢您选择联想商城，我们的品质适合有品位的您，祝您生活愉快。</p>  
-					<span class="fr">联想客服&nbsp;&nbsp;2016/11/14 16:37:07</span>   
-					</div>        
-				</dd>
-				<dd> 
-					<div class="sppl_top">    
-					<span class="sppl_score score_4">
-					</span>   
-					<span class="sppl_username">1***5</span>    
-					<span class="sppl_time">2016-11-14 00:17:11</span> 
-					</div> 
-					<div class="sppl_user_box">   
-					<p><a class="clickpl" uuid="208c8870-a16c-425f-8d7e-253163ec6ce6" href="javascript:void(0);">感觉使用起来还不错，再熟悉使用吧</a>
-					</p>  
-					</div>            
-					<div class="sppl_admin_box clearfix">        
-					<p>尊敬的用户您好，感谢您一直以来对联想的支持，您的支持是我们的最大动力，您的快乐是我们最大的心愿，您的脚步是我们最大的期盼，您的到来给我们增添了无限光彩。感谢您选择联想商城，我们的品质适合有品位的您，祝您生活愉快。</p>    
-					<span class="fr">联想客服&nbsp;&nbsp;2016/11/14 14:17:22</span> 
-					</div>      
-				</dd>
+				@endforeach
 		</dl>
 	</div>
 	</div>
