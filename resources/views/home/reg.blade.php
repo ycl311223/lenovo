@@ -17,6 +17,9 @@
                         联想注册页面
                     </div>
                     <div class="panel-body">
+                        @if(isset($error))
+                        <div class="alert alert-danger">{{$error}}</div>
+                        @endif
                         <form action="/regCheck" method="post">
                             {{csrf_field()}}
                             <div class="form-group">

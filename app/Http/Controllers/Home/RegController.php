@@ -31,12 +31,29 @@ class RegController extends Controller
         if(strtoupper($arr['code'])==$ocode){
             //验证密码位数
             if(strlen($arr['pass'])>=6 && strlen($arr['pass'])<=12){
+                //判断是否邮箱
+                if(preg_match('/\w+@\w+\.\w+/',$arr['email'])){
+                    //判断邮箱是否注册
+                    if(\DB::table('user')->where("email",$arr['email'])->get()){
+                        return back()->with("error","邮箱已被注册");
+                    }else{
+                        //判断密码
+                        if($arr['pass']==$arr['repass']){
+                            $data=array();
+                            $data['email']=$arr['email'];
 
+                        }else{
+                            return back()->with("error","两次输入密码不一致");
+                        }
+                    }
+                }else{
+                    return back()->with("error","邮箱有误");
+                }
             }else{
-                return back()->with("error","密码长度不对");
+                return back()->with("error","error");
             }
         }else{
-            return back()->with("error","验证码错误");
+            return back()->with("error","error");
         }
     }
 }
