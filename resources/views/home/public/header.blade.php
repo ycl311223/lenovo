@@ -44,8 +44,8 @@
             <span class="guo">0</span>
             </a>
           </li>
-          <li><a class="zc" href="javascript:;">注册</a><span class="gang">|</span></li>
-          <li><a class="dl"href="javascript:;">登陆</a><span class="gang">|</span></li>
+          <li><a class="zc" href="/reg">注册</a><span class="gang">|</span></li>
+          <li><a class="dl"href="/login">登陆</a><span class="gang">|</span></li>
         </ul> 
       </div>
    </div> 

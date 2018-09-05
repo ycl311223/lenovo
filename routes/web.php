@@ -86,3 +86,13 @@ Route::group(['namespace'=>'Admin','prefix'=>'a','middleware'=>'adminLogin'],fun
 
     //商品详情路由
     Route::get('/goods/{id}',"Home\GoodsController@index");
+    //商品分类页面
+    Route::get('/types/{id}',"Home\TypesController@index");
+    //商品登录页面
+    Route::get('/login',"Home\LoginController@index");
+    //商品注册页面
+    Route::get('/reg',"Home\RegController@index");
+    //验证码
+    Route::get('/yzm',"Home\RegController@yzm");
+    //处理注册操作
+    Route::post('/regCheck',"Home\RegController@check");

@@ -69,6 +69,7 @@ class IndexController extends Controller
 
         }
 
+
         //明星单品
         $goods=\DB::table("goods")->limit(6)->orderBy("id","desc")->get();
 

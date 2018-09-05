@@ -114,18 +114,18 @@
             @foreach($type as $one)
             <li>
                 <div class="left-menu">
-                    <a href="" target="_blank" class="list_nm" style="height:10.56px;line-height:10.56px" >{{$one->name}}
+                    <a href="/types/{{$one->id}}" target="_blank" class="list_nm" style="height:10.56px;line-height:10.56px" >{{$one->name}}
                         <span class="list_usepng list_icona"></span>
                     </a>
                     <div class="left-xiang" style="display: none;">
                         <div class="left-zong">
                             @foreach($one->zi as $two)
                             <div class="left-zi">
-                                <p><a href="">{{$two->name}}</a></p>
+                                <p><a href="/types/{{$two->id}}">{{$two->name}}</a></p>
                                 <ul class="clearfix">
                                     @foreach($two->zi as $three)
                                     <li>
-                                        <a href="" >{{$three->name}}</a>
+                                        <a href="/types/{{$three->id}}" >{{$three->name}}</a>
                                     </li>
                                     @endforeach
                                 </ul>

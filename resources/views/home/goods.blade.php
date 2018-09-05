@@ -464,6 +464,7 @@
     </div>
     <div id="pager_divdiv3" class="ns_discusspager">
 	<div class="ns_comment-inner" id="sppl_box">
+		@if($arr['commonTot']))
 		<dl id="sppl_title"> 
 			<dt>
 				<b>{{round((($arr['goodTot']/$arr['commonTot'])*100))}}</b>
@@ -476,6 +477,7 @@
 	   		<dd class="sppl_total" data-level="1">差评(<span>{{$arr['chaTot']}}</span>)</dd>
 	 		<dd class="sppl_picnum" data-level="9">有图片的评价(<span>330</span>)</dd>
 		</dl>
+		@endif
         <dl id="sppl_list" class="clearfix">
 				@foreach($comment as $com)
 				<dd>

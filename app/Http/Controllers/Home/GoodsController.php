@@ -16,8 +16,8 @@ class GoodsController extends Controller
 
         //查询商品对应的评论
         $commonTot=\DB::table('comment')->where('gid',$id)->count();
-        $goodTot=\DB::table('comment')->where('start','>',4)->count();
-        $chaTot=\DB::table('comment')->where('start','<=',2)->count();
+        $goodTot=\DB::table('comment')->where([['start','>',4],['gid',$id]])->count();
+        $chaTot=\DB::table('comment')->where([['start','<=',2],['gid',$id]])->count();
         $zhongTot=$commonTot-$goodTot-$chaTot;
 
         $arr=array(
@@ -26,6 +26,7 @@ class GoodsController extends Controller
             "chaTot"=>$chaTot,
             "zhongTot"=>$zhongTot,
         );
+//        dd($arr);
         $comment=\DB::table('comment')->where('gid',$id)->get();
         //格式化数据
         $data=array(
