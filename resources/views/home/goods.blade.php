@@ -31,38 +31,16 @@
 	                        <img width="544px" height="544px" src="/Uploads/goods/{{$img->img}}" alt="{{$goods->title}}">
                         </a></li>
 						@endforeach
-
                 </ul>
                 <div class="img-x">
 					<ul class="pro_ul" id="imgSmall" style="width: 408px;">
+						@foreach($goodsImg as $img)
 						<li id="im0" style="filter:alpha(opacity:100);opacity:1;">
 							<a href="javascript:;">
-							<img src="/style/home/img/0mRI4JyqNl6LmesaXp6rccOor-7051.w84.jpg" alt="
-							ThinkPad E550 20DFA08ECD图片
-							">
+							<img width="88px" height="88px" src="/Uploads/goods/{{$img->img}}" alt="{{$goods->title}}">
 							</a>
 						</li>
-						<li id="im1">
-							<a href="javascript:;">
-								<img src="/style/home/img/YynGl2jjz4nSEF1kX9jEPZCAM-1057.w84.jpg" alt="
-							ThinkPad E550 20DFA08ECD图片
-							">
-							</a>
-						</li>
-						<li id="im2">
-							<a href="javascript:;">
-								<img src="/style/home/img/eqPgNaax51iF0GP9tIDccuZdQ-1152.w84.jpg" alt="
-								ThinkPad E550 20DFA08ECD图片
-								">
-							</a>
-						</li>
-						<li id="im3">
-							<a href="javascript:;">
-								<img src="/style/home/img/svEGrWmzuctW3jkoJvqJxvdRG-3143.w84.jpg" alt="
-							ThinkPad E550 20DFA08ECD图片
-							">
-							</a>
-						</li>
+						@endforeach
 					</ul>
                 </div>
             </div>
@@ -89,14 +67,14 @@
 					<!-- 基本信息上部  空白位-->
 		            
 					<!-- 商品基础信息 -->
-	        <h1 class="biaoti">ThinkPad E550 20DFA08ECD</h1>
-	            <p class="ar-jie">i5-5200U/Windows 10 家庭版/4GB/500GB</p>
+	        <h1 class="biaoti">{{$goods->title}}</h1>
+	            <p class="ar-jie">{{$goods->info}}</p>
 	        <div class="tishi">【温馨提示】<a href="&#10;http://click.lenovo.com.cn/phpstat/tourl.php?a=1775" target="blank"><font color="red">晒单最高送1年延保，点击晒单-&gt;</font></a><br>
 	        </div>
 	        <div class="ar-main">
 	            <div class="amt clearfix">
 	                <span >商城价：</span>
-	                <b>¥4199</b>
+	                <b>¥{{$goods->price}}</b>
 	                <div id="yd">
 	                    <div class="icon">预售</div>
 	                    <span id="preselldj">定金：0</span>
@@ -140,45 +118,45 @@
 		            
 					<!-- 商品规格 -->
 		<div class="xilei">
-			<ul>
-    			<li class="clearfix">
-	    			<span class="qj" typeid="e430ee78-7b11-4437-9ca2-2201807640d0">E系列15寸：</span>
-	    			<div class="xilei-main">
-		    			<span id="b2306585-0b8a-11e6-943c-0050569f0752" class="de_sec_sel click_radio2 active" latag="latag_pc_detail_choose_48639_E系列15寸_b2306585-0b8a-11e6-943c-0050569f0752">i5 4GB 500GB机械 标准版</span>
-		    			<span id="b23e5d38-0b8a-11e6-943c-0050569f0752" class="de_sec_sel click_radio2" latag="latag_pc_detail_choose_48639_E系列15寸_b23e5d38-0b8a-11e6-943c-0050569f0752">i5  4GB  1TB机械   标准版</span>
-		    			<span id="b245b8df-0b8a-11e6-943c-0050569f0752" class="de_sec_sel click_radio2" latag="latag_pc_detail_choose_48639_E系列15寸_b245b8df-0b8a-11e6-943c-0050569f0752">i5 8GB 500GB机械 标准版</span>
-		    			<span id="8a990b5f-18dd-11e6-943c-0050569f0752" class="de_sec_sel click_radio2" latag="latag_pc_detail_choose_48639_E系列15寸_8a990b5f-18dd-11e6-943c-0050569f0752">i7 4GB 500GB机械 定制版</span>
-		    			<span id="b24c64c5-0b8a-11e6-943c-0050569f0752" class="de_sec_sel click_radio2" latag="latag_pc_detail_choose_48639_E系列15寸_b24c64c5-0b8a-11e6-943c-0050569f0752">i7  8GB   1TB机械   定制版</span>
-		    			<span id="9853e1ee-6380-11e6-b8c7-0050569f0752" class="de_sec_sel click_radio2" latag="latag_pc_detail_choose_48639_E系列15寸_9853e1ee-6380-11e6-b8c7-0050569f0752">i5 8GB 1TB机械 定制版</span>
-		    	</li>
-		    </ul>
+			{{--<ul>--}}
+    			{{--<li class="clearfix">--}}
+	    			{{--<span class="qj" typeid="e430ee78-7b11-4437-9ca2-2201807640d0">E系列15寸：</span>--}}
+	    			{{--<div class="xilei-main">--}}
+		    			{{--<span id="b2306585-0b8a-11e6-943c-0050569f0752" class="de_sec_sel click_radio2 active" latag="latag_pc_detail_choose_48639_E系列15寸_b2306585-0b8a-11e6-943c-0050569f0752">i5 4GB 500GB机械 标准版</span>--}}
+		    			{{--<span id="b23e5d38-0b8a-11e6-943c-0050569f0752" class="de_sec_sel click_radio2" latag="latag_pc_detail_choose_48639_E系列15寸_b23e5d38-0b8a-11e6-943c-0050569f0752">i5  4GB  1TB机械   标准版</span>--}}
+		    			{{--<span id="b245b8df-0b8a-11e6-943c-0050569f0752" class="de_sec_sel click_radio2" latag="latag_pc_detail_choose_48639_E系列15寸_b245b8df-0b8a-11e6-943c-0050569f0752">i5 8GB 500GB机械 标准版</span>--}}
+		    			{{--<span id="8a990b5f-18dd-11e6-943c-0050569f0752" class="de_sec_sel click_radio2" latag="latag_pc_detail_choose_48639_E系列15寸_8a990b5f-18dd-11e6-943c-0050569f0752">i7 4GB 500GB机械 定制版</span>--}}
+		    			{{--<span id="b24c64c5-0b8a-11e6-943c-0050569f0752" class="de_sec_sel click_radio2" latag="latag_pc_detail_choose_48639_E系列15寸_b24c64c5-0b8a-11e6-943c-0050569f0752">i7  8GB   1TB机械   定制版</span>--}}
+		    			{{--<span id="9853e1ee-6380-11e6-b8c7-0050569f0752" class="de_sec_sel click_radio2" latag="latag_pc_detail_choose_48639_E系列15寸_9853e1ee-6380-11e6-b8c7-0050569f0752">i5 8GB 1TB机械 定制版</span>--}}
+		    	{{--</li>--}}
+		    {{--</ul>--}}
 		<div>
 						<!-- ThinkPad 私人订制 -->
 						
 		<div class="xuan" style="">
-		    <ul>
-		        <li class="clearfix">
-		            <span class="qj">选择服务：</span>
-		           <div class='fuwrap'>
-		            <div class="fuwub">
-   		            	<span class="abb"itle="2年内提供由于意外情况（摔、瞌、碰、进液）导致的机器故障及外观损坏保修服务"  class="selectOption click_checkbox"><i class="guan"></i>Think笔记本2年意外保修 ￥509</span> 
-   		            	<ul>
-   		            	 <li title="1年内提供由于意外情况（摔、瞌、碰、进液）导致的机器故障及外观损坏保修服务" latag="latag_pc_detail_chooseservice_48639_51725" sort="1" data-code="51725"><i class="guan"></i>Think笔记本1年意外保修 ￥255</li>
-   		            	  <span class="guan shows show_down"></span>  
-   		            	</ul>
-   		            	
-   		            </div>
-   
-   	            	  <div class="fuwus">
-   	            	  	<span title="2年内提供全国范围免费上门维修服务" latag="latag_pc_detail_chooseservice_48639_51728" sort="0" data-code="51728" class="selectOption click_checkbox"><i class="guan"></i>Think笔记本2年上门服务（全国） ￥579</span>
-   	            	   </div>
-   	            	   <div class="fuh">
-   	            	  	<span title="2年内提供机械硬盘故障换新，旧盘不回收服务" latag="latag_pc_detail_chooseservice_48639_51730" sort="0" data-code="51730" class="selectOption click_checkbox"><i class="guan"></i>Think笔记本2年硬盘不回收 ￥249</span> 
-   	            	  </div>
-   	            	</div>
-		            </div>
-		        </li>
-		    </ul>
+		    {{--<ul>--}}
+		        {{--<li class="clearfix">--}}
+		            {{--<span class="qj">选择服务：</span>--}}
+		           {{--<div class='fuwrap'>--}}
+		            {{--<div class="fuwub">--}}
+   		            	{{--<span class="abb"itle="2年内提供由于意外情况（摔、瞌、碰、进液）导致的机器故障及外观损坏保修服务"  class="selectOption click_checkbox"><i class="guan"></i>Think笔记本2年意外保修 ￥509</span> --}}
+   		            	{{--<ul>--}}
+   		            	 {{--<li title="1年内提供由于意外情况（摔、瞌、碰、进液）导致的机器故障及外观损坏保修服务" latag="latag_pc_detail_chooseservice_48639_51725" sort="1" data-code="51725"><i class="guan"></i>Think笔记本1年意外保修 ￥255</li>--}}
+   		            	  {{--<span class="guan shows show_down"></span>  --}}
+   		            	{{--</ul>--}}
+   		            	{{----}}
+   		            {{--</div>--}}
+   {{----}}
+   	            	  {{--<div class="fuwus">--}}
+   	            	  	{{--<span title="2年内提供全国范围免费上门维修服务" latag="latag_pc_detail_chooseservice_48639_51728" sort="0" data-code="51728" class="selectOption click_checkbox"><i class="guan"></i>Think笔记本2年上门服务（全国） ￥579</span>--}}
+   	            	   {{--</div>--}}
+   	            	   {{--<div class="fuh">--}}
+   	            	  	{{--<span title="2年内提供机械硬盘故障换新，旧盘不回收服务" latag="latag_pc_detail_chooseservice_48639_51730" sort="0" data-code="51730" class="selectOption click_checkbox"><i class="guan"></i>Think笔记本2年硬盘不回收 ￥249</span> --}}
+   	            	  {{--</div>--}}
+   	            	{{--</div>--}}
+		            {{--</div>--}}
+		        {{--</li>--}}
+		    {{--</ul>--}}
 		</div>
 				
 							<!-- 分期文案 -->
