@@ -96,3 +96,11 @@ Route::group(['namespace'=>'Admin','prefix'=>'a','middleware'=>'adminLogin'],fun
     Route::get('/yzm',"Home\RegController@yzm");
     //处理注册操作
     Route::post('/regCheck',"Home\RegController@check");
+    //激活
+    Route::get('/jihuo/{id}/{token}',"Home\RegController@jihuo");
+    //处理前台登录
+    Route::post('/check',"Home\LoginController@check");
+    //退出登录
+    Route::get('/logout',"Home\LoginController@logout");
+    //找回密码
+    Route::any("/zhaohui","Home\LoginController@zhaohui");
