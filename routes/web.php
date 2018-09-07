@@ -104,3 +104,18 @@ Route::group(['namespace'=>'Admin','prefix'=>'a','middleware'=>'adminLogin'],fun
     Route::get('/logout',"Home\LoginController@logout");
     //找回密码
     Route::any("/zhaohui","Home\LoginController@zhaohui");
+
+    Route::any("/savePass/{id}/{token}","Home\LoginController@savePass");
+
+    //购物车
+    Route::get("/car","Home\CarController@index");
+    //加入购物车
+    Route::get("/addCar","Home\CarController@addCar");
+
+    //购物车ajax调整数量
+    Route::post("CarAdd","Home\CarController@CarAdd");
+    Route::post("CarJian","Home\CarController@CarJian");
+    Route::post("CarDel","Home\CarController@CarDel");
+
+    //到达结算页面
+    Route::post("jiesuan","Home\CarController@jiesuan");

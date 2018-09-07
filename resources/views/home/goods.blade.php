@@ -133,15 +133,28 @@
             <div class="de_info_btn clearfix">
                 <div class="de_info_num">
                     <label class="i_box">
-                        <input class="pro_num J_input" type="text" value="1">
+                        <input class="pro_num J_input" id="goodsNumber" type="text" value="1">
                         <input class="pro_add J_add" type="button">
                         <input class="pro_less J_minus" type="button">                    
                     </label>
                     <span id="stock">有库存</span>
                 </div> 
-		                <a href="javascript:void(0);" class="de_button de_btn_buy" id="ljgm" style="" event-name="PC端_产品详情页_立即购买_ThinkPad E550 20DFA08ECD" latag="latag_pc_detail_orderimmediately_48639" title="立即购买">立即购买</a>
-		                <a href="javascript:void(0);" class="de_button de_btn_car" id="jrgwc" style="" event-name="PC端_产品详情页_加入购物车_ThinkPad E550 20DFA08ECD" latag="latag_pc_detail_addshopcart_48639" title="加入购物车">加入购物车</a>
+		                <a href="javascript:void(0);" class="de_button de_btn_buy" id="ljgm"  title="立即购买">立即购买</a>
+		                <a href="javascript:void(0);" class="de_button de_btn_car" id="jrgwc" title="加入购物车">加入购物车</a>
+						<input type="hidden" name="id" value="{{$goods->id}}">
                 </div>
+
+
+				<script>
+					$("#jrgwc").click(function(){
+					    //读取商品的id
+						var id=$("input[name=id]").val();
+						//购买商品的数量
+						var num=$("#goodsNumber").val();
+						//加入购物车
+						window.location.href="/addCar?id="+id+"&num="+num;
+					});
+				</script>
             
 			<!-- 基本信息下部  空白位-->
         </div>
