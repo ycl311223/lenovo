@@ -251,7 +251,7 @@
           @foreach($goods as $good)
           <li style="width: 198px; height: 297px;">
             <a target="_blank" href="/goods/{{$good->id}}">
-              <img title="{{$good->title}}" src="/Uploads/goods/{{$good->img}}">
+              <img style="width: 150px;height: 100px" title="{{$good->title}}" src="/Uploads/goods/{{$good->img}}">
             </a>
             <p class="star_name">
               <a title="{{$good->title}}" target="_blank" href="/goods/{{$good->id}}">{{$good->title}}</a>
