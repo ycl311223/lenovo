@@ -104,3 +104,5 @@ Route::group(['namespace'=>'Admin','prefix'=>'a','middleware'=>'adminLogin'],fun
     Route::get('/logout',"Home\LoginController@logout");
     //找回密码
     Route::any("/zhaohui","Home\LoginController@zhaohui");
+
+

@@ -12,7 +12,6 @@ class LoginController extends Controller
         //获取上一个页面
         session(['prevPage'=>$_SERVER['HTTP_REFERER']]);
 
-
         return view("home.login");
     }
     //处理登录

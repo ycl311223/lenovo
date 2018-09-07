@@ -66,13 +66,14 @@ class RegController extends Controller
                         }
                     }
                 }else{
-                    return back()->with("error","邮箱有误");
+                    dd("邮箱有误");
+                    return back()->with("error","");
                 }
             }else{
-                return back()->with("error","error");
+                return back()->with("error","密码长度必须介于6-12之间");
             }
         }else{
-            return back()->with("error","error");
+            return back()->with("error","验证码输入错误");
         }
     }
     //激活账户
@@ -92,4 +93,6 @@ class RegController extends Controller
             echo "您的token已经过期";
         }
     }
+
+
 }

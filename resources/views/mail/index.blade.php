@@ -7,7 +7,7 @@
 <body>
 
 
-    <a href="http://www.lianxiang.com/jihuo/{{$id}}/{{$token}}">立即激活</a>
+    <a href="http://127.0.0.1:8000/jihuo/{{$id}}/{{$token}}">立即激活</a>
 
 
 </body>

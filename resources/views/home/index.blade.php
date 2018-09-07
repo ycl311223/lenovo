@@ -111,7 +111,7 @@
   <div class="container carouse">
       <div class="left">
         <ul>
-            //首页左侧分类栏
+            {{--首页左侧分类栏--}}
             @foreach($type as $one)
             <li>
                 <div class="left-menu">
