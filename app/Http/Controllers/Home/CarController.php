@@ -92,6 +92,11 @@ class CarController extends Controller
     }
 
     public function jiesuan(Request $request){
+        //查询当前登录者的收货地址信息
+        $uid=session('lenovoHomeUserInfo.id');
+        //查询数据
+        $addr=\DB::table("addr")->where("uid",$uid)->get();
+
         //接受到商品数据
         $idArr=$request->input('goods');
         //读取session
@@ -108,6 +113,6 @@ class CarController extends Controller
             }
         }
 
-        return view("home.jiesuan")->with("newShop",$newArr);
+        return view("home.jiesuan")->with("newShop",$newArr)->with("addr",$addr);
     }
 }
