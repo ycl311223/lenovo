@@ -58,7 +58,7 @@ class IndexController extends Controller
 
         //遍历一级分类
         foreach($type as $key => $value){
-            //将每个一级分类下的所有三级分类的id分别放到一个数组中，其实三级分类就是最后一级分类了，就是具体的商品了，不容许再放下分了。
+            //将每个一级分类下的所有三级分类的id分别放到一个数组中，其实三级分类就是最后一级分类了，就是具体的商品了，不容许再往下分了。
             $newArr=array();
             //遍历二级分类
             foreach($value->zi as $two ){

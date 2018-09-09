@@ -123,3 +123,10 @@ Route::group(['namespace'=>'Admin','prefix'=>'a','middleware'=>'adminLogin'],fun
     //到达结算页面
     Route::post("jiesuan","Home\CarController@jiesuan");
 
+
+
+    //生成订单
+    Route::post("orders","Home\OrdersController@index");
+    //支付路由
+    Route::get("pay/{code}","Home\OrdersController@pay");
+

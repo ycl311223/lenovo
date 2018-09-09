@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>{{config('web.title')}}</title>
   <meta name="keywords" content="{{config('web.keywords')}}" />
-    <meta name="description" content="{{config('web.description')}}" />
+  <meta name="description" content="{{config('web.description')}}" />
   <link rel="shortcut icon" href="/style/home/img/1.png">
   <link rel="stylesheet" href="/style/home/css/lenovo.css">
   <script src="/style/home/js/jquery.js"></script>
@@ -13,29 +13,25 @@
 <body>
   <!-- 头 -->
   @include("home.public.header")
-  
-  <!-- 菜单 -->
+  <!-- 上边缘菜单 -->
   <div class="container menus">
     <div class="menus-img">
       <a><img src="/style/home/img/4.jpg"alt=""></a>
     </div>
     <div class="menus-dao">
       <ul>
-        <li><a class=xp>小新Air 13 Pro
-          <span class="pro"></span>
-        </a>
-        </li>
+        <li><a class=xp>小新Air 13 Pro<span class="pro"></span></a></li>
         <li class="bk">
           <a >爆款</a>
           <ul class="bk-bao">
-           <li> <a href="">小新Air 12</a></li>
+            <li> <a href="">小新Air 12</a></li>
             <li><a href="">小新Air13 Pro</a></li>
             <li><a href="">小新310</a></li>
             <li><a href="">拯救者游戏本</a></li>
             <li><a href="">ThinkPad New S2</a></li>
             <li><a href="">看家宝Snowman</a></li>
             <li><a href="">小新700</a></li>
-            <li><a href="">MIIX5</a> </li> 
+            <li><a href="">MIIX5</a> </li>
             <li><a href="">YOGA BOOK</a></li>
           </ul>
         </li>
@@ -51,67 +47,19 @@
           </ul>
         </li>
         <li><a>社区</a></li>
-        <!-- <li></li> -->
       </ul>
-     </div>
+    </div>
   </div>
   <!-- 监听 -->
   <div class="jianting">
     <ul>   
     </ul>
   </div>
-  <!-- 侧边栏 -->
-  <div class="cebianlang">
-   <ul>
-    <li class="ccbl"><span class="dianhua"></span>
-      <div class="xianshi">
-        <dl class="clearfix">
-          <dt class="pc"></dt>
-           <dd>
-            <a href="javascript:;">商城服务热线<br>
-            4000-888-222</a>
-          </dd>
-           <dt class="tk"></dt>
-           <dd>
-            <a href="javascript:;">商城服务热线<br>4000-888-222</a>
-          </dd>
-           <dt class="shouji"></dt>
-           <dd>
-            <a href="javascript:;">手机频道服务热线<br>
-              400-818-8818</a>
-          </dd>
-           <dt class="xiuli"></dt>
-           <dd>
-            <a href="javascript:;">服务产品购买热线<br>
-              400-890-1566</a>
-          </dd> 
-          <dt class="dianlian"></dt>
-          <dd>
-            <a href="javascript:;">联想商用客户热线<br>
-              400-813-6161</a>
-          </dd>
-          <dt class="ka"></dt>
-          <dd>
-            <a href="javascript:;">通信卡服务热线<br>
-              400-641-0041</a>
-          </dd>
-         </dl>
-      </div>
-    </li>
-    <li><span class="wechat"></span></li>
-    <li><span class="home"></span></li>
-    <li><span class="qianbi"></span></li>
-   </ul>
-   <div class="huidao"> 
-    <span class="dingbu"></span>
-   </div>
-   
-  </div>
   <!-- 轮播区 -->
   <div class="container carouse">
       <div class="left">
+        {{--首页左侧分类栏--}}
         <ul>
-            {{--首页左侧分类栏--}}
             @foreach($type as $one)
             <li>
                 <div class="left-menu">
@@ -157,8 +105,6 @@
            <li class=''><img src="/Uploads/lun/{{$value->img}}" alt=""></li>
           @endif
       @endforeach
-
-
     </ul>
     <ul class='nums'>
         @foreach($slider as $key => $value)
@@ -167,57 +113,57 @@
             @else
                 <li class=""></li>
             @endif
-
         @endforeach
     </ul>
       <a href="javascript:;" class="btn btn-left"></a>
       <a href="javascript:;" class="btn btn-right"></a>
   </div>
-      <div class="right">
-        <div class="xin">   
-          <div class="xisn">
-            <div class="horn_ring"></div>
-            <ul class="xnss"> 
-               <li><a target="_blank" href="">四年延保，沸腾国庆！</a></li> 
-               <li><a target="_blank" href="">联想APP客户端乐豆抽奖大战开始啦，赶快下载抽取大奖，miix平板等着你！</a></li>
-               <li><a target="_blank" href="">四年延保，沸腾国庆！</a></li> 
-               <li><a target="_blank" href="">联想APP客户端乐豆抽奖大战开始啦，赶快下载抽取大奖，miix平板等着你！</a>
-               </li>                   
-             </ul>  
-            </div> 
-          </div>
-        <!-- 评论 -->
-        <div class="ping">
-           <h2 class="clearfix"><span>精彩讨论</span>
-            <a target="_blank" href="">更多 &gt;</a>
-           </h2>
-           <ul class="lun">               
-              <li>
-                <a target="_blank" href="">【评测】一款高颜值笔记本的告白</a>
-              </li>               
-              <li>
-                <a target="_blank" href="">【评测】Moto Z+哈苏模块≈单反体验</a>
-              </li>       
-              <li>
-              <a target="_blank" href="">【活动】分享你的怀旧珍藏赢好礼</a>
-              </li>          
-              <li>
-                <a target="_blank" href="">【体验】诠释轻薄与性能的小新 Air 13 Pro</a>
-              </li>           
-              <li>
-                <a target="_blank" href="">【小白课堂】小新笔记本还能这样玩</a>
-              </li>        
-              <li>
-                <a target="_blank" href="l">【活动】联想智能存储有奖征名</a>
-              </li>        
-              <li>
-                
-                <a target="_blank" href="">【选本】新晋二合一笔记本推荐</a>
-              </li>               
-             </ul>
+  {{--右侧公告与讨论--}}
+  <div class="right">
+    {{--右侧公告--}}
+    <div class="xin">
+      <div class="xisn">
+        <div class="horn_ring"></div>
+        <ul class="xnss">
+           <li><a target="_blank" href="">四年延保，沸腾国庆！</a></li>
+           <li><a target="_blank" href="">联想APP客户端乐豆抽奖大战开始啦，赶快下载抽取大奖，miix平板等着你！</a></li>
+           <li><a target="_blank" href="">四年延保，沸腾国庆！</a></li>
+           <li><a target="_blank" href="">联想APP客户端乐豆抽奖大战开始啦，赶快下载抽取大奖，miix平板等着你！</a>
+           </li>
+         </ul>
         </div>
       </div>
-  
+    <!-- 右侧评论 -->
+    <div class="ping">
+       <h2 class="clearfix"><span>精彩讨论</span>
+        <a target="_blank" href="">更多 &gt;</a>
+       </h2>
+       <ul class="lun">
+          <li>
+            <a target="_blank" href="">【评测】一款高颜值笔记本的告白</a>
+          </li>
+          <li>
+            <a target="_blank" href="">【评测】Moto Z+哈苏模块≈单反体验</a>
+          </li>
+          <li>
+          <a target="_blank" href="">【活动】分享你的怀旧珍藏赢好礼</a>
+          </li>
+          <li>
+            <a target="_blank" href="">【体验】诠释轻薄与性能的小新 Air 13 Pro</a>
+          </li>
+          <li>
+            <a target="_blank" href="">【小白课堂】小新笔记本还能这样玩</a>
+          </li>
+          <li>
+            <a target="_blank" href="l">【活动】联想智能存储有奖征名</a>
+          </li>
+          <li>
+
+            <a target="_blank" href="">【选本】新晋二合一笔记本推荐</a>
+          </li>
+         </ul>
+    </div>
+  </div>
   </div>
   <!-- 图片 -->
   <div class="container middle-erbo">
@@ -235,7 +181,6 @@
             </a>
           </li>
           @endforeach
-
       </ul>
       <a href="javascript:;" class="btn btn-left"></a>
       <a href="javascript:;" class="btn btn-right"></a>
@@ -294,7 +239,6 @@
      </div>
      <div class="rong">
        <div class="zuo">
-
          <a target="_blank" href="/goods/{{$good->id}}"> <img width="240" height="535" title="{{$lou->leftAds->title}}" src="/Uploads/ads/{{$lou->leftAds->img}}">
          </a>
        </div>
@@ -313,9 +257,7 @@
           <span class="good-biao"></span>
          </div>
         @endforeach
-
        </div>
-
        <div class="clear"></div>
      </div>
      </div>
@@ -401,11 +343,7 @@
      </div>
     </div>
    </div>
-
-
-@include("home.public.footer") 
-
+@include("home.public.footer")
 </body>
-
 </html>
 
